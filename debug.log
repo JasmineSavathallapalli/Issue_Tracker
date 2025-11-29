@@ -644,3 +644,17 @@ INFO 2025-11-29 15:21:27,534 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 77
 INFO 2025-11-29 15:22:07,985 basehttp "GET /issues/?status=open HTTP/1.1" 200 9868
 INFO 2025-11-29 15:22:10,132 basehttp "GET /issues/4/ HTTP/1.1" 200 7169
 INFO 2025-11-29 15:22:15,746 basehttp "GET /issues/4/ HTTP/1.1" 200 7169
+INFO 2025-11-29 15:41:31,336 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 15:41:31,343 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 15:41:31,772 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 15:41:31,773 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 15:41:31,783 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 15:41:31,787 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 15:41:32,437 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 15:41:32,442 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 15:41:32,941 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 15:41:32,947 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 15:41:32,961 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 15:41:32,964 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 15:43:18,834 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 15:43:22,566 basehttp "GET / HTTP/1.1" 200 29004
