@@ -1,0 +1,543 @@
+/* ============================================ */
+/* FILE: static/css/responsive.css */
+/* Add this to your static folder and include in base.html */
+/* ============================================ */
+
+/* Mobile-First Responsive Design */
+/* ================================ */
+
+/* Base Mobile Styles (default) */
+/* ============================= */
+
+/* Tables - Make them horizontally scrollable on mobile */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    min-width: 600px;
+}
+
+@media (max-width: 576px) {
+    .table {
+        font-size: 0.8rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 0.5rem 0.25rem;
+    }
+}
+
+/* Cards - Stack on mobile */
+.card {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .card-header {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Buttons - Make them touch-friendly */
+@media (max-width: 576px) {
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .btn-sm {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Forms - Optimize for mobile input */
+@media (max-width: 576px) {
+    .form-control,
+    .form-select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .form-label {
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* Badges - Smaller on mobile */
+@media (max-width: 576px) {
+    .badge {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+/* Modals - Full screen on small devices */
+@media (max-width: 576px) {
+    .modal-dialog {
+        margin: 0;
+        max-width: 100%;
+        height: 100vh;
+    }
+    
+    .modal-content {
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+/* Dropdowns - Better mobile touch targets */
+@media (max-width: 576px) {
+    .dropdown-menu {
+        font-size: 0.875rem;
+    }
+    
+    .dropdown-item {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Pagination - Stack on mobile */
+@media (max-width: 576px) {
+    .pagination {
+        font-size: 0.875rem;
+    }
+    
+    .page-link {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* Alerts - Full width on mobile */
+@media (max-width: 576px) {
+    .alert {
+        border-radius: 0;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+/* Issue Cards - Optimize for mobile */
+@media (max-width: 768px) {
+    .issue-card {
+        padding: 0.75rem;
+    }
+    
+    .issue-card h6 {
+        font-size: 0.95rem;
+    }
+    
+    .issue-card .badge {
+        margin: 0.25rem 0.25rem 0 0;
+    }
+}
+
+/* Stat Cards - 2 columns on tablet, 1 on mobile */
+@media (max-width: 768px) {
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+    
+    .metric-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .stat-card p,
+    .stat-card h6 {
+        font-size: 0.875rem;
+    }
+}
+
+/* Filter Forms - Stack vertically on mobile */
+@media (max-width: 768px) {
+    .filter-sidebar {
+        margin-bottom: 1rem;
+    }
+    
+    .filter-sidebar .form-control,
+    .filter-sidebar .form-select {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Activity Timeline - Adjust spacing */
+@media (max-width: 576px) {
+    .activity-timeline {
+        padding-left: 1rem;
+    }
+    
+    .activity-item {
+        padding-bottom: 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Charts - Maintain aspect ratio */
+@media (max-width: 768px) {
+    .chart-container {
+        height: 250px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .chart-container {
+        height: 200px !important;
+    }
+}
+
+/* Dashboard Quick Actions */
+@media (max-width: 768px) {
+    .quick-action-btn {
+        padding: 1rem 0.5rem;
+    }
+    
+    .quick-action-btn i {
+        font-size: 2rem;
+    }
+    
+    .quick-action-btn small {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .quick-action-btn {
+        padding: 0.75rem 0.25rem;
+    }
+    
+    .quick-action-btn i {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .quick-action-btn small {
+        font-size: 0.7rem;
+    }
+}
+
+/* Issue Detail Page */
+@media (max-width: 768px) {
+    .issue-detail-sidebar {
+        margin-top: 1rem;
+    }
+}
+
+/* Comment Section */
+@media (max-width: 576px) {
+    .comment-item {
+        padding: 0.75rem;
+    }
+    
+    .comment-author {
+        font-size: 0.875rem;
+    }
+    
+    .comment-content {
+        font-size: 0.875rem;
+    }
+}
+
+/* File Attachments */
+@media (max-width: 576px) {
+    .attachment-item {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    .attachment-info {
+        margin-top: 0.5rem;
+    }
+}
+
+/* Settings Page - Tabs to Accordion on mobile */
+@media (max-width: 768px) {
+    .settings-tabs {
+        margin-bottom: 1rem;
+    }
+    
+    .tab-content {
+        padding: 1rem 0;
+    }
+}
+
+/* Analytics Page */
+@media (max-width: 768px) {
+    .analytics-metric {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Landing Page Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0 40px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .btn-hero {
+        padding: 12px 30px;
+        font-size: 1rem;
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .feature-card {
+        padding: 30px 20px;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+/* Touch-Friendly Interactions */
+@media (hover: none) {
+    .btn:hover,
+    .card:hover,
+    .issue-card:hover {
+        transform: none;
+    }
+    
+    .nav-link:active,
+    .btn:active,
+    .card:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Landscape Mobile Optimizations */
+@media (max-width: 896px) and (orientation: landscape) {
+    .hero-section {
+        padding: 40px 0 30px;
+    }
+    
+    .modal-dialog {
+        max-height: 90vh;
+    }
+}
+
+/* Tablet Optimizations (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-fluid {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .sidebar {
+        width: 220px;
+    }
+    
+    .main-content {
+        margin-left: 220px;
+    }
+}
+
+/* Large Desktop Optimizations (1920px+) */
+@media (min-width: 1920px) {
+    .container-fluid {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar,
+    .top-navbar,
+    .btn,
+    .dropdown,
+    .alert {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    .card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/* Accessibility - High Contrast Mode */
+@media (prefers-contrast: high) {
+    .card {
+        border: 2px solid currentColor;
+    }
+    
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    /* Add dark mode styles if needed */
+    .card {
+        background: #2d3748;
+        color: #e2e8f0;
+    }
+}
+
+/* Utility Classes for Responsive */
+.hide-mobile {
+    display: block;
+}
+
+@media (max-width: 576px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+.show-mobile {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .show-mobile {
+        display: block !important;
+    }
+}
+
+.text-mobile-center {
+    text-align: left;
+}
+
+@media (max-width: 576px) {
+    .text-mobile-center {
+        text-align: center !important;
+    }
+}
+
+/* Flexbox Responsive Utilities */
+@media (max-width: 576px) {
+    .flex-mobile-column {
+        flex-direction: column !important;
+    }
+    
+    .flex-mobile-wrap {
+        flex-wrap: wrap !important;
+    }
+}
+
+/* Spacing Adjustments for Mobile */
+@media (max-width: 576px) {
+    .py-mobile-3 {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    
+    .px-mobile-2 {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    
+    .mb-mobile-2 {
+        margin-bottom: 0.5rem !important;
+    }
+}
+
+/* Prevent horizontal scroll */
+body {
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    overflow-x: hidden;
+}
+
+/* Ensure images don't overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile-friendly form inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    max-width: 100%;
+}
+
+/* Touch-friendly clickable areas (minimum 44x44px) */
+@media (max-width: 576px) {
+    a,
+    button,
+    input[type="submit"],
+    input[type="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+
+/* ============================================ */
+/* HOW TO USE THIS FILE */
+/* ============================================ */
+
+/*
+1. Save this file as: static/css/responsive.css
+
+2. Create static/css/ directory if it doesn't exist
+
+3. Add to base.html <head> section:
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+4. Make sure STATIC_URL is configured in settings.py
+
+5. Run: python manage.py collectstatic (for production)
+
+6. Test on different devices:
+   - Mobile (320px - 576px)
+   - Tablet (577px - 992px)
+   - Desktop (993px+)
+
+7. Use Chrome DevTools Device Toolbar (F12 > Toggle Device Toolbar)
+   to test responsive design
+*/

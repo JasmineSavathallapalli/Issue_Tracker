@@ -1,3 +1,6 @@
+<!-- ============================================ -->
+<!-- FILE: templates/issue_tracker_app/dashboard.html -->
+<!-- ============================================ -->
 {% extends 'base.html' %}
 {% load static %}
 
@@ -6,135 +9,137 @@
 
 {% block extra_css %}
 <style>
-    /* Metric cards */
     .metric-card {
-        transition: 0.3s ease;
+        transition: all 0.3s ease;
         border-left: 4px solid;
         height: 100%;
     }
     .metric-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
     .metric-icon {
-        width: 55px;
-        height: 55px;
+        width: 60px;
+        height: 60px;
         border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 22px;
+        font-size: 24px;
     }
-
-    /* FIX: Chart containers */
-    .chart-wrapper {
+    .chart-container {
         position: relative;
-        height: 260px !important;
-        width: 100%;
+        height: 300px;
     }
-
-    /* Quick Action buttons */
+    .activity-timeline {
+        position: relative;
+        padding-left: 30px;
+    }
+    .activity-item {
+        position: relative;
+        padding-bottom: 20px;
+        border-left: 2px solid #e9ecef;
+    }
+    .activity-item:last-child {
+        border-left: none;
+    }
+    .activity-dot {
+        position: absolute;
+        left: -6px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 2px #0d6efd;
+    }
     .quick-action-btn {
-        border: 2px dashed #d7d7d7;
-        transition: 0.25s;
+        border: 2px dashed #dee2e6;
+        transition: all 0.3s;
     }
     .quick-action-btn:hover {
         border-color: #0d6efd;
         background: #f8f9fa;
     }
-
-    /* Activity timeline */
-    .activity-item {
-        padding-left: 20px;
-        position: relative;
-        border-left: 2px solid #e9ecef;
-        margin-bottom: 20px;
-    }
-    .activity-dot {
-        position: absolute;
-        left: -6px;
-        top: 4px;
-        width: 12px;
-        height: 12px;
-        background: #0d6efd;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        box-shadow: 0 0 0 2px #0d6efd;
-    }
-
-    /* Mobile layout fixes */
-    @media (max-width: 768px) {
-        .metric-card h2 {
-            font-size: 1.6rem;
-        }
-        .chart-wrapper {
-            height: 220px !important;
-        }
-    }
 </style>
 {% endblock %}
 
-
-
 {% block content %}
 <div class="container-fluid">
-
-    <!-- Welcome Header (NO Create Issue Button) -->
+    <!-- Welcome Section -->
     <div class="row mb-4">
         <div class="col-12">
-            <h2 class="mb-1">Welcome back, {{ request.user.first_name|default:request.user.username }} 👋</h2>
-            <p class="text-muted mb-0">Here’s what’s happening with your issues today</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h2 class="mb-1">Welcome back, {{ request.user.first_name|default:request.user.username }}! 👋</h2>
+                    <p class="text-muted mb-0">Here's what's happening with your issues today</p>
+                </div>
+                <div>
+                    <a href="{% url 'issue_create' %}" class="btn btn-primary btn-lg">
+                        <i class="bi bi-plus-circle"></i> Create Issue
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
-
-    <!-- Statistics Cards -->
+    <!-- Key Metrics -->
     <div class="row g-4 mb-4">
-        <!-- Total -->
         <div class="col-xl-3 col-md-6">
-            <div class="card metric-card shadow-sm border-0" style="border-left-color:#0d6efd;">
-                <div class="card-body d-flex align-items-center">
-                    <div class="metric-icon bg-primary bg-opacity-10 text-primary me-3">
-                        <i class="bi bi-clipboard-data"></i>
+            <div class="card metric-card border-0 shadow-sm" style="border-left-color: #0d6efd !important;">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="metric-icon bg-primary bg-opacity-10 text-primary me-3">
+                            <i class="bi bi-clipboard-data"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <p class="text-muted mb-1 small">Total Issues</p>
+                            <h2 class="mb-0 fw-bold">{{ stats.total }}</h2>
+                        </div>
                     </div>
-                    <div>
-                        <p class="text-muted small mb-1">Total Issues</p>
-                        <h2 class="fw-bold mb-0">{{ stats.total }}</h2>
-                        <small class="text-success">↑ {{ stats.recent }} new this week</small>
+                    <div class="mt-3 pt-3 border-top">
+                        <small class="text-success">
+                            <i class="bi bi-arrow-up"></i> {{ stats.recent }} new this week
+                        </small>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Open -->
         <div class="col-xl-3 col-md-6">
-            <div class="card metric-card shadow-sm border-0" style="border-left-color:#28a745;">
-                <div class="card-body d-flex align-items-center">
-                    <div class="metric-icon bg-success bg-opacity-10 text-success me-3">
-                        <i class="bi bi-exclamation-circle"></i>
+            <div class="card metric-card border-0 shadow-sm" style="border-left-color: #28a745 !important;">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="metric-icon bg-success bg-opacity-10 text-success me-3">
+                            <i class="bi bi-exclamation-circle"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <p class="text-muted mb-1 small">Open Issues</p>
+                            <h2 class="mb-0 fw-bold">{{ stats.open }}</h2>
+                        </div>
                     </div>
-                    <div>
-                        <p class="text-muted small mb-1">Open Issues</p>
-                        <h2 class="fw-bold mb-0">{{ stats.open }}</h2>
-                        <a href="{% url 'issue_list' %}?status=open" class="small text-decoration-none">
-                            View all <i class="bi bi-arrow-right"></i>
+                    <div class="mt-3 pt-3 border-top">
+                        <a href="{% url 'issue_list' %}?status=open" class="text-decoration-none small">
+                            View all open <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- In Progress -->
         <div class="col-xl-3 col-md-6">
-            <div class="card metric-card shadow-sm border-0" style="border-left-color:#17a2b8;">
-                <div class="card-body d-flex align-items-center">
-                    <div class="metric-icon bg-info bg-opacity-10 text-info me-3">
-                        <i class="bi bi-arrow-repeat"></i>
+            <div class="card metric-card border-0 shadow-sm" style="border-left-color: #17a2b8 !important;">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="metric-icon bg-info bg-opacity-10 text-info me-3">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <p class="text-muted mb-1 small">In Progress</p>
+                            <h2 class="mb-0 fw-bold">{{ stats.in_progress }}</h2>
+                        </div>
                     </div>
-                    <div>
-                        <p class="text-muted small mb-1">In Progress</p>
-                        <h2 class="fw-bold mb-0">{{ stats.in_progress }}</h2>
-                        <a href="{% url 'issue_list' %}?status=in_progress" class="small text-decoration-none">
+                    <div class="mt-3 pt-3 border-top">
+                        <a href="{% url 'issue_list' %}?status=in_progress" class="text-decoration-none small">
                             View progress <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -142,18 +147,23 @@
             </div>
         </div>
 
-        <!-- Resolved -->
         <div class="col-xl-3 col-md-6">
-            <div class="card metric-card shadow-sm border-0" style="border-left-color:#6f42c1;">
-                <div class="card-body d-flex align-items-center">
-                    <div class="metric-icon bg-purple bg-opacity-10 text-purple me-3">
-                        <i class="bi bi-check-circle"></i>
+            <div class="card metric-card border-0 shadow-sm" style="border-left-color: #6f42c1 !important;">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="metric-icon bg-purple bg-opacity-10 text-purple me-3">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <p class="text-muted mb-1 small">Resolved</p>
+                            <h2 class="mb-0 fw-bold">{{ stats.resolved }}</h2>
+                        </div>
                     </div>
-                    <div>
-                        <p class="text-muted small mb-1">Resolved</p>
-                        <h2 class="fw-bold mb-0">{{ stats.resolved }}</h2>
+                    <div class="mt-3 pt-3 border-top">
                         {% if stats.avg_resolution_hours %}
-                             <small class="text-muted"><i class="bi bi-clock"></i> Avg: {{ stats.avg_resolution_hours }} hrs</small>
+                        <small class="text-muted">
+                            <i class="bi bi-clock"></i> Avg: {{ stats.avg_resolution_hours }}h
+                        </small>
                         {% endif %}
                     </div>
                 </div>
@@ -161,42 +171,37 @@
         </div>
     </div>
 
-
-    <!-- Main Grid -->
     <div class="row g-4">
-        <!-- LEFT COLUMN -->
+        <!-- Left Column -->
         <div class="col-xl-8">
-
             <!-- Quick Actions -->
-            <div class="card shadow-sm border-0 mb-4">
+            <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
-                    <h5 class="mb-3"><i class="bi bi-lightning-charge text-warning"></i> Quick Actions</h5>
-
+                    <h5 class="card-title mb-3">
+                        <i class="bi bi-lightning-charge text-warning"></i> Quick Actions
+                    </h5>
                     <div class="row g-3">
-                        <div class="col-6 col-md-3">
+                        <div class="col-md-3 col-6">
                             <a href="{% url 'issue_create' %}" class="btn quick-action-btn w-100 p-3 text-center">
-                                <i class="bi bi-plus-circle fs-3 text-primary d-block"></i>
+                                <i class="bi bi-plus-circle fs-3 d-block mb-2 text-primary"></i>
                                 <small>New Issue</small>
                             </a>
                         </div>
-
-                        <div class="col-6 col-md-3">
+                        <div class="col-md-3 col-6">
                             <a href="{% url 'issue_list' %}?assignee=me" class="btn quick-action-btn w-100 p-3 text-center">
-                                <i class="bi bi-person-check fs-3 text-success d-block"></i>
+                                <i class="bi bi-person-check fs-3 d-block mb-2 text-success"></i>
                                 <small>My Tasks</small>
                             </a>
                         </div>
-
-                        <div class="col-6 col-md-3">
+                        <div class="col-md-3 col-6">
                             <a href="{% url 'analytics' %}" class="btn quick-action-btn w-100 p-3 text-center">
-                                <i class="bi bi-graph-up fs-3 text-info d-block"></i>
+                                <i class="bi bi-graph-up fs-3 d-block mb-2 text-info"></i>
                                 <small>Analytics</small>
                             </a>
                         </div>
-
-                        <div class="col-6 col-md-3">
+                        <div class="col-md-3 col-6">
                             <a href="{% url 'label_list' %}" class="btn quick-action-btn w-100 p-3 text-center">
-                                <i class="bi bi-tags fs-3 text-warning d-block"></i>
+                                <i class="bi bi-tags fs-3 d-block mb-2 text-warning"></i>
                                 <small>Labels</small>
                             </a>
                         </div>
@@ -204,204 +209,292 @@
                 </div>
             </div>
 
-
             <!-- Charts -->
-            <div class="row g-4">
+            <div class="row g-4 mb-4">
                 <div class="col-md-6">
-                    <div class="card shadow-sm border-0">
+                    <div class="card border-0 shadow-sm h-100">
                         <div class="card-body">
-                            <h6 class="mb-3">Issues by Status</h6>
-                            <div class="chart-wrapper">
-                                <canvas id="statusChart"></canvas>
-                            </div>
+                            <h6 class="card-title mb-3">Issues by Status</h6>
+                            <canvas id="statusChart"></canvas>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6">
-                    <div class="card shadow-sm border-0">
+                    <div class="card border-0 shadow-sm h-100">
                         <div class="card-body">
-                            <h6 class="mb-3">Issues by Priority</h6>
-                            <div class="chart-wrapper">
-                                <canvas id="priorityChart"></canvas>
-                            </div>
+                            <h6 class="card-title mb-3">Issues by Priority</h6>
+                            <canvas id="priorityChart"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
 
-
             <!-- My Issues -->
-            <div class="card shadow-sm border-0 mt-4">
-                <div class="card-header bg-white border-0 d-flex justify-content-between">
-                    <h5><i class="bi bi-person-circle text-primary"></i> My Recent Issues</h5>
-
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center py-3">
+                    <h5 class="mb-0">
+                        <i class="bi bi-person-circle text-primary"></i> My Recent Issues
+                    </h5>
                     <a href="{% url 'issue_list' %}?reporter=me" class="btn btn-sm btn-outline-primary">
                         View All <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
-
                 <div class="card-body p-0">
                     {% if my_issues %}
-                    <table class="table table-hover mb-0">
-                        <tbody>
-                            {% for issue in my_issues %}
-                            <tr>
-                                <td class="ps-3">
-                                    <a href="{% url 'issue_detail' issue.pk %}" class="text-decoration-none fw-semibold">
-                                        #{{ issue.id }} - {{ issue.title|truncatewords:8 }}
-                                    </a>
-                                    <br>
-                                    <small class="text-muted"><i class="bi bi-clock"></i> {{ issue.created_at|timesince }} ago</small>
-                                </td>
-
-                                <td class="text-center">
-                                    <span class="badge bg-{{ issue.status }}">{{ issue.get_status_display }}</span>
-                                </td>
-
-                                <td class="text-center">
-                                    <span class="badge bg-{{ issue.priority }}">{{ issue.get_priority_display }}</span>
-                                </td>
-
-                                <td class="pe-3">
-                                    {% if issue.assignee %}
-                                        <small><i class="bi bi-arrow-right"></i> {{ issue.assignee.username }}</small>
-                                    {% else %}
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <tbody>
+                                {% for issue in my_issues %}
+                                <tr>
+                                    <td class="ps-3">
+                                        <a href="{% url 'issue_detail' issue.pk %}" class="text-decoration-none text-dark fw-medium">
+                                            #{{ issue.id }} - {{ issue.title|truncatewords:8 }}
+                                        </a>
+                                        <br>
+                                        <small class="text-muted">
+                                            <i class="bi bi-clock"></i> {{ issue.created_at|timesince }} ago
+                                        </small>
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="badge bg-{{ issue.status }}-subtle text-{{ issue.status }}">
+                                            {{ issue.get_status_display }}
+                                        </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="badge bg-{{ issue.priority }}">
+                                            {{ issue.get_priority_display }}
+                                        </span>
+                                    </td>
+                                    <td class="pe-3">
+                                        {% if issue.assignee %}
+                                        <small>
+                                            <i class="bi bi-arrow-right"></i> {{ issue.assignee.username }}
+                                        </small>
+                                        {% else %}
                                         <small class="text-muted">Unassigned</small>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                     {% else %}
                     <div class="text-center py-5">
-                        <i class="bi bi-inbox fs-1 text-muted"></i>
-                        <p class="text-muted">No issues reported yet.</p>
+                        <i class="bi bi-inbox fs-1 text-muted d-block mb-3"></i>
+                        <p class="text-muted">You haven't reported any issues yet.</p>
+                        <a href="{% url 'issue_create' %}" class="btn btn-primary">
+                            <i class="bi bi-plus-circle"></i> Create Your First Issue
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Assigned to Me -->
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center py-3">
+                    <h5 class="mb-0">
+                        <i class="bi bi-person-check text-success"></i> Assigned to Me
+                    </h5>
+                    <a href="{% url 'issue_list' %}?assignee=me" class="btn btn-sm btn-outline-success">
+                        View All <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="card-body p-0">
+                    {% if assigned_to_me %}
+                    <div class="list-group list-group-flush">
+                        {% for issue in assigned_to_me %}
+                        <a href="{% url 'issue_detail' issue.pk %}" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between align-items-start">
+                                <div>
+                                    <h6 class="mb-1">#{{ issue.id }} - {{ issue.title|truncatewords:10 }}</h6>
+                                    <small class="text-muted">
+                                        {{ issue.get_category_display }} • 
+                                        <i class="bi bi-person"></i> {{ issue.reporter.username }}
+                                    </small>
+                                </div>
+                                <div class="text-end">
+                                    <span class="badge bg-{{ issue.priority }} d-block mb-1">
+                                        {{ issue.get_priority_display }}
+                                    </span>
+                                    <small class="text-muted">{{ issue.created_at|timesince }}</small>
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="text-center py-5">
+                        <i class="bi bi-check-circle fs-1 text-success d-block mb-3"></i>
+                        <p class="text-muted">No issues assigned to you. Great job! 🎉</p>
                     </div>
                     {% endif %}
                 </div>
             </div>
         </div>
 
-
-
-        <!-- RIGHT COLUMN -->
+        <!-- Right Sidebar -->
         <div class="col-xl-4">
-
             <!-- Notifications -->
             {% if unread_notifications > 0 %}
-            <div class="card shadow-sm border-0 mb-4">
+            <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
-                    <h6><i class="bi bi-bell-fill text-warning"></i> Notifications</h6>
-                    <p class="mb-1">{{ unread_notifications }} unread notifications</p>
-                    <a href="{% url 'notifications' %}" class="btn btn-sm btn-outline-warning w-100">View</a>
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h6 class="mb-0">
+                            <i class="bi bi-bell-fill text-warning"></i> Notifications
+                        </h6>
+                        <span class="badge bg-danger rounded-pill">{{ unread_notifications }}</span>
+                    </div>
+                    <p class="mb-2">You have {{ unread_notifications }} unread notification{{ unread_notifications|pluralize }}.</p>
+                    <a href="{% url 'notifications' %}" class="btn btn-sm btn-outline-warning w-100">
+                        View Notifications
+                    </a>
                 </div>
             </div>
             {% endif %}
 
+            <!-- Overdue Issues Alert -->
+            {% if overdue_count > 0 %}
+            <div class="alert alert-warning border-0 shadow-sm">
+                <h6 class="alert-heading">
+                    <i class="bi bi-exclamation-triangle-fill"></i> Attention Required
+                </h6>
+                <p class="mb-2">You have {{ overdue_count }} overdue issue{{ overdue_count|pluralize }}.</p>
+                <a href="{% url 'issue_list' %}?assignee=me&status=open" class="btn btn-sm btn-warning">
+                    View Overdue Issues
+                </a>
+            </div>
+            {% endif %}
+
             <!-- Recent Activity -->
-            <div class="card shadow-sm border-0 mb-4">
-                <div class="card-header bg-white border-0">
-                    <h6><i class="bi bi-activity text-info"></i> Recent Activity</h6>
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white border-0 py-3">
+                    <h6 class="mb-0">
+                        <i class="bi bi-activity text-info"></i> Recent Activity
+                    </h6>
                 </div>
                 <div class="card-body">
-                    {% for activity in recent_activity %}
-                    <div class="activity-item">
-                        <div class="activity-dot"></div>
-                        <strong>{{ activity.user.username }}</strong> {{ activity.action }}
-                        <a href="{% url 'issue_detail' activity.issue.pk %}">#{{ activity.issue.id }}</a>
-                        <br>
-                        <small class="text-muted">{{ activity.timestamp|timesince }} ago</small>
+                    {% if recent_activity %}
+                    <div class="activity-timeline">
+                        {% for activity in recent_activity %}
+                        <div class="activity-item">
+                            <div class="activity-dot bg-primary"></div>
+                            <div>
+                                <strong>{{ activity.user.username }}</strong> 
+                                {{ activity.action }}
+                                <a href="{% url 'issue_detail' activity.issue.pk %}" class="text-decoration-none">
+                                    #{{ activity.issue.id }}
+                                </a>
+                                <br>
+                                <small class="text-muted">{{ activity.timestamp|timesince }} ago</small>
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
+                    {% else %}
+                    <p class="text-muted text-center py-4">No recent activity</p>
+                    {% endif %}
                 </div>
             </div>
 
-
-            <!-- Stats -->
-            <div class="card shadow-sm border-0 mb-4">
-                <div class="card-header bg-white border-0">
-                    <h6><i class="bi bi-bar-chart text-success"></i> Statistics</h6>
+            <!-- Issue Statistics -->
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white border-0 py-3">
+                    <h6 class="mb-0">
+                        <i class="bi bi-bar-chart text-success"></i> Statistics
+                    </h6>
                 </div>
-
                 <div class="card-body">
-                    <!-- Open -->
                     <div class="mb-3">
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-between mb-1">
                             <small>Open Issues</small>
-                            <small>{{ stats.open }} / {{ stats.total }}</small>
+                            <small class="text-muted">{{ stats.open }} / {{ stats.total }}</small>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-success" style="width:{% widthratio stats.open stats.total 100 %}%"></div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" style="width: {% widthratio stats.open stats.total 100 %}%"></div>
                         </div>
                     </div>
-
-                    <!-- In Progress -->
                     <div class="mb-3">
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-between mb-1">
                             <small>In Progress</small>
-                            <small>{{ stats.in_progress }} / {{ stats.total }}</small>
+                            <small class="text-muted">{{ stats.in_progress }} / {{ stats.total }}</small>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" style="width:{% widthratio stats.in_progress stats.total 100 %}%"></div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" style="width: {% widthratio stats.in_progress stats.total 100 %}%"></div>
                         </div>
                     </div>
-
-                    <!-- Resolved -->
                     <div>
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-between mb-1">
                             <small>Resolved</small>
-                            <small>{{ stats.resolved }} / {{ stats.total }}</small>
+                            <small class="text-muted">{{ stats.resolved }} / {{ stats.total }}</small>
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-purple" style="width:{% widthratio stats.resolved stats.total 100 %}%"></div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-purple" style="width: {% widthratio stats.resolved stats.total 100 %}%"></div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>
 {% endblock %}
 
-
 {% block extra_js %}
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
-/* ------------------ STATUS CHART ------------------ */
-new Chart(document.getElementById("statusChart"), {
+// Status Chart
+const statusCtx = document.getElementById('statusChart');
+new Chart(statusCtx, {
     type: 'doughnut',
     data: {
-        labels: {{ status_distribution|safe }}.map(s => s.status),
+        labels: {{ status_distribution|safe }}.map(item => item.status),
         datasets: [{
-            data: {{ status_distribution|safe }}.map(s => s.count),
-            backgroundColor: ['#28a745','#ffc107','#17a2b8','#6f42c1','#6c757d','#fd7e14']
-        }]
-    },
-    options: { responsive: true, maintainAspectRatio: false }
-});
-
-
-/* ------------------ PRIORITY CHART ------------------ */
-new Chart(document.getElementById("priorityChart"), {
-    type: 'bar',
-    data: {
-        labels: {{ priority_distribution|safe }}.map(s => s.priority),
-        datasets: [{
-            data: {{ priority_distribution|safe }}.map(s => s.count),
-            backgroundColor: ['#6c757d','#ffc107','#fd7e14','#dc3545']
+            data: {{ status_distribution|safe }}.map(item => item.count),
+            backgroundColor: [
+                '#28a745', '#17a2b8', '#ffc107', '#6f42c1', '#6c757d', '#fd7e14'
+            ]
         }]
     },
     options: {
         responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { display: false }},
-        scales: { y: { beginAtZero: true, ticks: { stepSize: 1 }}}
+        maintainAspectRatio: true,
+        plugins: {
+            legend: {
+                position: 'bottom'
+            }
+        }
+    }
+});
+
+// Priority Chart
+const priorityCtx = document.getElementById('priorityChart');
+new Chart(priorityCtx, {
+    type: 'bar',
+    data: {
+        labels: {{ priority_distribution|safe }}.map(item => item.priority),
+        datasets: [{
+            label: 'Issues',
+            data: {{ priority_distribution|safe }}.map(item => item.count),
+            backgroundColor: ['#6c757d', '#ffc107', '#fd7e14', '#dc3545']
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    stepSize: 1
+                }
+            }
+        }
     }
 });
 </script>

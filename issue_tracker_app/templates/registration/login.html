@@ -1,9 +1,13 @@
+
+<!-- ============================================ -->
+<!-- FILE: templates/registration/login.html -->
+<!-- ============================================ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - IssueTracker</title>
+    <title>Sign In - IssueTracker</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
@@ -13,80 +17,232 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
+        
+        .login-container {
+            width: 100%;
+            max-width: 450px;
+            padding: 20px;
+        }
+        
         .login-card {
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            border: none;
-            border-radius: 15px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
         }
+        
         .login-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            border-radius: 15px 15px 0 0;
-            padding: 30px;
+            padding: 40px 30px;
             text-align: center;
+        }
+        
+        .login-header h2 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .login-header p {
+            margin: 0;
+            opacity: 0.95;
+        }
+        
+        .login-body {
+            padding: 40px 30px;
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        
+        .form-control {
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        
+        .input-group-text {
+            background: transparent;
+            border: 2px solid #e9ecef;
+            border-right: none;
+            border-radius: 10px 0 0 10px;
+        }
+        
+        .input-group .form-control {
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .btn-signin {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        
+        .btn-signin:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+        
+        .divider {
+            text-align: center;
+            margin: 25px 0;
+            position: relative;
+        }
+        
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e9ecef;
+        }
+        
+        .divider span {
+            background: white;
+            padding: 0 15px;
+            color: #6c757d;
+            position: relative;
+        }
+        
+        .link-custom {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .link-custom:hover {
+            color: #764ba2;
+        }
+        
+        .alert {
+            border-radius: 10px;
+            border: none;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .back-to-home a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .back-to-home a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-5">
-                <div class="card login-card">
-                    <div class="login-header">
-                        <h2><i class="bi bi-bug-fill"></i> IssueTracker</h2>
-                        <p class="mb-0">Track, manage, and resolve issues efficiently</p>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2><i class="bi bi-bug-fill"></i> IssueTracker</h2>
+                <p>Track, manage, and resolve issues efficiently</p>
+            </div>
+            <div class="login-body">
+                <h4 class="mb-4 text-center">Sign In</h4>
+                
+                {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                     </div>
-                    <div class="card-body p-4">
-                        <h4 class="mb-4">Sign In</h4>
-                        
-                        {% if messages %}
-                            {% for message in messages %}
-                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
-                                {{ message }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                            </div>
-                            {% endfor %}
-                        {% endif %}
+                    {% endfor %}
+                {% endif %}
 
-                        {% if form.errors %}
-                        <div class="alert alert-danger">
-                            <strong>Login failed!</strong> Please check your username and password.
-                        </div>
-                        {% endif %}
+                {% if form.errors %}
+                <div class="alert alert-danger">
+                    <strong>Login failed!</strong> Please check your username and password.
+                </div>
+                {% endif %}
 
-                        <form method="post">
-                            {% csrf_token %}
-                            
-                            <div class="mb-3">
-                                <label for="id_username" class="form-label">Username</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="bi bi-person"></i></span>
-                                    <input type="text" name="username" class="form-control" id="id_username" required autofocus>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="id_password" class="form-label">Password</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
-                                    <input type="password" name="password" class="form-control" id="id_password" required>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary w-100 mb-3">
-                                <i class="bi bi-box-arrow-in-right"></i> Sign In
-                            </button>
-                            
-                            <input type="hidden" name="next" value="{{ next }}">
-                        </form>
-
-                        <div class="text-center">
-                            <p class="text-muted">Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label for="id_username" class="form-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-person"></i>
+                            </span>
+                            <input type="text" name="username" class="form-control" id="id_username" 
+                                   placeholder="Enter your username" required autofocus>
                         </div>
                     </div>
+
+                    <div class="mb-3">
+                        <label for="id_password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-lock"></i>
+                            </span>
+                            <input type="password" name="password" class="form-control" id="id_password" 
+                                   placeholder="Enter your password" required>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">
+                                Remember me
+                            </label>
+                        </div>
+                        <a href="{% url 'password_reset' %}" class="link-custom">
+                            Forgot Password?
+                        </a>
+                    </div>
+
+                    <button type="submit" class="btn btn-signin">
+                        <i class="bi bi-box-arrow-in-right"></i> Sign In
+                    </button>
+                    
+                    <input type="hidden" name="next" value="{{ next }}">
+                </form>
+
+                <div class="divider">
+                    <span>Don't have an account?</span>
+                </div>
+
+                <div class="text-center">
+                    <a href="{% url 'register' %}" class="link-custom">
+                        Register here <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
             </div>
+        </div>
+        
+        <div class="back-to-home">
+            <a href="/">
+                <i class="bi bi-arrow-left"></i> Back to Home
+            </a>
         </div>
     </div>
 

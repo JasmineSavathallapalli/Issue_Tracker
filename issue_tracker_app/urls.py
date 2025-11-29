@@ -1,13 +1,12 @@
-# ============================================
-# FILE: issue_tracker_app/urls.py
-# ============================================
-
 from django.urls import path
 from . import views
 
 urlpatterns = [
-    # Dashboard
-    path('', views.dashboard, name='dashboard'),
+    # Landing page (shown to non-authenticated users)
+    path('', views.landing_page, name='landing'),
+    
+    # Dashboard (shown to authenticated users)
+    path('dashboard/', views.dashboard, name='dashboard'),
     
     # Issues
     path('issues/', views.issue_list, name='issue_list'),
@@ -16,14 +15,12 @@ urlpatterns = [
     path('issues/<int:pk>/update/', views.issue_update, name='issue_update'),
     path('issues/<int:pk>/delete/', views.issue_delete, name='issue_delete'),
     path('issues/<int:pk>/toggle-watch/', views.toggle_watch, name='toggle_watch'),
-    
-    # Export
     path('issues/export/', views.export_issues, name='export_issues'),
     
     # Labels
     path('labels/', views.label_list, name='label_list'),
     
-    # Analytics
+    # Analytics & Reports
     path('analytics/', views.analytics, name='analytics'),
     
     # Notifications

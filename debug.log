@@ -663,3 +663,279 @@ INFO 2025-11-29 16:03:04,497 basehttp "GET /issues/3/delete/ HTTP/1.1" 200 11490
 INFO 2025-11-29 16:03:07,330 basehttp "POST /issues/3/delete/ HTTP/1.1" 302 0
 INFO 2025-11-29 16:03:07,552 basehttp "GET /issues/ HTTP/1.1" 200 13114
 INFO 2025-11-29 16:03:12,454 basehttp "GET / HTTP/1.1" 200 27025
+INFO 2025-11-29 17:19:58,210 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 17:39:06,237 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 17:39:10,255 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 17:39:15,568 basehttp "GET / HTTP/1.1" 200 27106
+INFO 2025-11-29 17:39:32,005 basehttp "GET /issues/2/ HTTP/1.1" 200 10889
+INFO 2025-11-29 17:39:35,817 basehttp "GET /issues/2/delete/ HTTP/1.1" 200 11543
+INFO 2025-11-29 17:39:39,554 basehttp "POST /issues/2/delete/ HTTP/1.1" 302 0
+INFO 2025-11-29 17:39:39,954 basehttp "GET /issues/ HTTP/1.1" 200 12468
+INFO 2025-11-29 17:39:42,385 basehttp "GET / HTTP/1.1" 200 25509
+INFO 2025-11-29 17:39:47,279 basehttp "GET /analytics/ HTTP/1.1" 200 17928
+INFO 2025-11-29 17:40:04,219 basehttp "GET /notifications/ HTTP/1.1" 200 10649
+INFO 2025-11-29 17:40:07,460 basehttp "GET / HTTP/1.1" 200 25509
+INFO 2025-11-29 17:40:31,918 basehttp "GET /settings/ HTTP/1.1" 200 33585
+INFO 2025-11-29 17:40:58,934 basehttp "GET /issues/export/?reporter=me HTTP/1.1" 200 315
+INFO 2025-11-29 17:48:34,680 basehttp "POST /settings/ HTTP/1.1" 302 0
+INFO 2025-11-29 17:48:35,114 basehttp "GET /settings/ HTTP/1.1" 200 33890
+INFO 2025-11-29 17:48:35,931 basehttp "GET /media/avatars/gitim.jpg HTTP/1.1" 200 311819
+INFO 2025-11-29 17:48:53,988 basehttp "POST /settings/ HTTP/1.1" 302 0
+INFO 2025-11-29 17:48:54,444 basehttp "GET /settings/ HTTP/1.1" 200 33890
+INFO 2025-11-29 17:48:54,807 basehttp "GET /media/avatars/gitim.jpg HTTP/1.1" 304 0
+INFO 2025-11-29 17:49:51,371 basehttp "GET /settings/ HTTP/1.1" 200 33565
+INFO 2025-11-29 17:49:51,745 basehttp "GET /media/avatars/gitim.jpg HTTP/1.1" 304 0
+INFO 2025-11-29 17:49:58,981 basehttp "GET / HTTP/1.1" 200 25511
+INFO 2025-11-29 17:50:01,965 basehttp "GET /analytics/ HTTP/1.1" 200 17928
+INFO 2025-11-29 17:50:07,815 basehttp "GET / HTTP/1.1" 200 25511
+INFO 2025-11-29 17:50:26,420 basehttp "GET /issues/1/ HTTP/1.1" 200 10840
+INFO 2025-11-29 17:50:28,585 basehttp "GET /issues/1/delete/ HTTP/1.1" 200 11545
+INFO 2025-11-29 17:50:30,401 basehttp "POST /issues/1/delete/ HTTP/1.1" 302 0
+INFO 2025-11-29 17:50:30,735 basehttp "GET /issues/ HTTP/1.1" 200 11768
+INFO 2025-11-29 17:50:32,852 basehttp "GET / HTTP/1.1" 200 23983
+INFO 2025-11-29 17:50:49,433 basehttp "GET /issues/ HTTP/1.1" 200 11443
+INFO 2025-11-29 17:50:58,279 basehttp "GET /issues/4/ HTTP/1.1" 200 10846
+INFO 2025-11-29 17:51:01,969 basehttp "GET /issues/4/delete/ HTTP/1.1" 200 11542
+INFO 2025-11-29 17:51:03,720 basehttp "POST /issues/4/delete/ HTTP/1.1" 302 0
+INFO 2025-11-29 17:51:04,059 basehttp "GET /issues/ HTTP/1.1" 200 11191
+INFO 2025-11-29 17:51:05,762 basehttp "GET / HTTP/1.1" 200 22001
+INFO 2025-11-29 17:51:12,008 basehttp "GET /issues/ HTTP/1.1" 200 10866
+INFO 2025-11-29 17:51:13,664 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 10866
+INFO 2025-11-29 17:51:15,709 basehttp "GET /issues/?status=open HTTP/1.1" 200 10866
+INFO 2025-11-29 17:51:17,870 basehttp "GET /labels/ HTTP/1.1" 200 13031
+INFO 2025-11-29 17:51:26,099 basehttp "GET /analytics/ HTTP/1.1" 200 17490
+INFO 2025-11-29 17:51:29,819 basehttp "GET /notifications/ HTTP/1.1" 200 10649
+INFO 2025-11-29 17:51:32,645 basehttp "GET / HTTP/1.1" 200 22001
+INFO 2025-11-29 17:51:36,217 basehttp "GET /issues/?status=open HTTP/1.1" 200 10866
+INFO 2025-11-29 17:51:37,817 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 10866
+INFO 2025-11-29 17:51:39,220 basehttp "GET /issues/?status=open HTTP/1.1" 200 10866
+INFO 2025-11-29 17:51:43,507 basehttp "GET /labels/ HTTP/1.1" 200 13031
+INFO 2025-11-29 18:10:14,971 basehttp "GET / HTTP/1.1" 200 22001
+INFO 2025-11-29 18:10:23,983 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-29 18:10:24,010 basehttp "GET /login/ HTTP/1.1" 200 3604
+INFO 2025-11-29 18:10:43,032 basehttp "POST /login/ HTTP/1.1" 200 3817
+INFO 2025-11-29 18:41:08,954 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 18:41:22,291 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 18:41:25,972 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-29 18:41:26,091 basehttp "GET /login/?next=/ HTTP/1.1" 200 3605
+INFO 2025-11-29 18:48:48,918 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 18:48:53,173 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 18:50:12,878 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\urls.py changed, reloading.
+INFO 2025-11-29 18:50:16,195 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 18:51:50,407 basehttp "POST /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-29 18:51:51,010 basehttp "GET / HTTP/1.1" 200 22001
+INFO 2025-11-29 18:52:02,735 basehttp "GET /settings/ HTTP/1.1" 200 32045
+INFO 2025-11-29 18:52:03,123 basehttp "GET /media/avatars/gitim.jpg HTTP/1.1" 304 0
+INFO 2025-11-29 18:52:21,810 basehttp "GET / HTTP/1.1" 200 22001
+INFO 2025-11-29 18:52:25,757 basehttp "GET /settings/ HTTP/1.1" 200 32045
+INFO 2025-11-29 19:36:13,310 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\models.py changed, reloading.
+INFO 2025-11-29 19:36:15,064 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 19:36:17,791 basehttp "GET / HTTP/1.1" 200 22001
+INFO 2025-11-29 19:38:59,025 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 19:39:00,606 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 19:39:03,384 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 19:39:05,085 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 19:39:35,021 basehttp "GET / HTTP/1.1" 200 22001
+INFO 2025-11-29 19:39:38,782 basehttp "GET / HTTP/1.1" 200 22001
+WARNING 2025-11-29 19:39:40,142 log Not Found: /favicon.ico
+WARNING 2025-11-29 19:39:40,143 basehttp "GET /favicon.ico HTTP/1.1" 404 5815
+INFO 2025-11-29 19:39:40,491 basehttp "GET / HTTP/1.1" 200 22001
+INFO 2025-11-29 19:39:43,661 basehttp "GET /settings/ HTTP/1.1" 200 17237
+INFO 2025-11-29 19:40:06,288 basehttp "GET /settings/ HTTP/1.1" 200 31223
+INFO 2025-11-29 19:40:06,582 basehttp "GET /media/avatars/gitim.jpg HTTP/1.1" 200 311819
+WARNING 2025-11-29 19:40:07,199 log Not Found: /favicon.ico
+WARNING 2025-11-29 19:40:07,201 basehttp "GET /favicon.ico HTTP/1.1" 404 5815
+INFO 2025-11-29 19:42:21,058 basehttp "GET /settings/ HTTP/1.1" 200 31223
+INFO 2025-11-29 20:03:22,012 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:03:24,085 basehttp "GET / HTTP/1.1" 200 22001
+INFO 2025-11-29 20:03:28,582 basehttp "GET /settings/ HTTP/1.1" 200 31938
+INFO 2025-11-29 20:03:28,670 basehttp "GET /media/avatars/gitim.jpg HTTP/1.1" 304 0
+INFO 2025-11-29 20:03:53,446 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 20:03:54,101 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:03:54,256 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 20:03:54,869 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:03:55,913 basehttp "GET / HTTP/1.1" 200 22001
+INFO 2025-11-29 20:04:08,808 basehttp "GET / HTTP/1.1" 200 22001
+WARNING 2025-11-29 20:04:09,310 log Not Found: /favicon.ico
+WARNING 2025-11-29 20:04:09,311 basehttp "GET /favicon.ico HTTP/1.1" 404 5815
+INFO 2025-11-29 20:04:10,586 basehttp "GET / HTTP/1.1" 200 22001
+WARNING 2025-11-29 20:04:11,012 log Not Found: /favicon.ico
+WARNING 2025-11-29 20:04:11,013 basehttp "GET /favicon.ico HTTP/1.1" 404 5815
+INFO 2025-11-29 20:04:13,249 basehttp "GET /settings/ HTTP/1.1" 200 31223
+INFO 2025-11-29 20:04:19,904 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 20:04:20,030 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 20:04:20,518 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:04:20,652 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:04:22,345 basehttp "GET / HTTP/1.1" 200 22001
+INFO 2025-11-29 20:04:26,062 basehttp "GET /settings/ HTTP/1.1" 200 32045
+WARNING 2025-11-29 20:08:42,329 base Session data corrupted
+INFO 2025-11-29 20:08:42,338 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-29 20:08:42,393 basehttp "GET /login/?next=/ HTTP/1.1" 200 3605
+WARNING 2025-11-29 20:08:42,730 log Not Found: /favicon.ico
+WARNING 2025-11-29 20:08:42,731 basehttp "GET /favicon.ico HTTP/1.1" 404 5815
+INFO 2025-11-29 20:21:54,392 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 20:21:54,393 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 20:21:55,042 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:21:55,042 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:22:14,098 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 20:22:14,107 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 20:22:14,740 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:22:14,740 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:22:17,288 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 20:22:17,288 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 20:22:17,939 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:22:17,939 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:22:53,550 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\urls.py changed, reloading.
+INFO 2025-11-29 20:22:53,563 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\urls.py changed, reloading.
+INFO 2025-11-29 20:22:54,203 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:22:54,204 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:23:31,873 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\urls.py changed, reloading.
+INFO 2025-11-29 20:23:31,876 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\urls.py changed, reloading.
+INFO 2025-11-29 20:23:32,496 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:23:32,496 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:23:35,052 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\urls.py changed, reloading.
+INFO 2025-11-29 20:23:35,054 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\urls.py changed, reloading.
+INFO 2025-11-29 20:23:35,725 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:23:35,726 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:24:30,980 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 20:24:30,985 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 20:24:31,657 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:24:31,659 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:24:37,263 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 20:24:37,271 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 20:24:38,081 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:25:04,470 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 20:25:04,487 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 20:25:05,146 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:25:05,148 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:37:58,533 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:38:00,665 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-29 20:38:00,832 basehttp "GET /dashboard/ HTTP/1.1" 200 28377
+INFO 2025-11-29 20:38:19,927 basehttp "GET /issues/create/ HTTP/1.1" 200 17681
+INFO 2025-11-29 20:38:26,544 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 14393
+INFO 2025-11-29 20:38:30,235 basehttp "GET /analytics/ HTTP/1.1" 200 21017
+INFO 2025-11-29 20:38:34,760 basehttp "GET /labels/ HTTP/1.1" 200 16558
+INFO 2025-11-29 20:38:41,887 basehttp "GET /settings/ HTTP/1.1" 200 35582
+INFO 2025-11-29 20:38:41,973 basehttp "GET /media/avatars/gitim.jpg HTTP/1.1" 304 0
+INFO 2025-11-29 20:38:50,279 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:38:50,354 basehttp "GET / HTTP/1.1" 200 23676
+INFO 2025-11-29 20:39:14,059 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:39:15,516 basehttp "GET / HTTP/1.1" 200 23676
+INFO 2025-11-29 20:39:29,766 basehttp "GET /register/ HTTP/1.1" 200 5048
+INFO 2025-11-29 20:40:51,523 basehttp "GET /register/ HTTP/1.1" 200 5048
+INFO 2025-11-29 20:41:10,151 basehttp "GET /register/ HTTP/1.1" 200 5048
+INFO 2025-11-29 20:41:54,690 basehttp "GET /login/ HTTP/1.1" 200 7565
+INFO 2025-11-29 20:42:03,670 basehttp "GET /password-reset/ HTTP/1.1" 200 3297
+INFO 2025-11-29 20:42:07,738 basehttp "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:42:07,813 basehttp "GET /password-reset/done/ HTTP/1.1" 200 3646
+INFO 2025-11-29 20:42:07,988 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+INFO 2025-11-29 20:42:07,991 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+INFO 2025-11-29 20:42:07,993 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-11-29 20:42:08,017 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-11-29 20:42:28,647 basehttp "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:42:28,654 basehttp "GET /password-reset/done/ HTTP/1.1" 200 3646
+INFO 2025-11-29 20:42:42,087 basehttp "GET /login/ HTTP/1.1" 200 7565
+INFO 2025-11-29 20:42:46,809 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:42:46,902 basehttp "GET /dashboard/ HTTP/1.1" 200 28377
+INFO 2025-11-29 20:43:05,033 basehttp "GET /issues/ HTTP/1.1" 200 14393
+INFO 2025-11-29 20:43:06,173 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 14393
+INFO 2025-11-29 20:43:08,023 basehttp "GET /issues/?status=open HTTP/1.1" 200 14393
+INFO 2025-11-29 20:43:09,703 basehttp "GET /labels/ HTTP/1.1" 200 16558
+INFO 2025-11-29 20:43:13,445 basehttp "GET /analytics/ HTTP/1.1" 200 21017
+INFO 2025-11-29 20:43:17,835 basehttp "GET /notifications/ HTTP/1.1" 200 14176
+INFO 2025-11-29 20:43:19,892 basehttp "GET /dashboard/ HTTP/1.1" 200 28377
+INFO 2025-11-29 20:43:22,581 basehttp "GET /settings/ HTTP/1.1" 200 35582
+INFO 2025-11-29 20:43:55,478 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:43:55,518 basehttp "GET / HTTP/1.1" 200 23676
+INFO 2025-11-29 20:44:15,450 basehttp "GET /login/ HTTP/1.1" 200 7565
+INFO 2025-11-29 20:44:19,285 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:44:19,364 basehttp "GET /dashboard/ HTTP/1.1" 200 28377
+INFO 2025-11-29 20:44:42,487 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 14393
+INFO 2025-11-29 20:44:45,384 basehttp "GET /dashboard/ HTTP/1.1" 200 28377
+INFO 2025-11-29 20:52:33,696 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 20:52:38,046 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-29 20:52:38,168 basehttp "GET /dashboard/ HTTP/1.1" 200 28377
+INFO 2025-11-29 20:53:03,744 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-29 20:53:03,862 basehttp "GET /dashboard/ HTTP/1.1" 200 28377
+INFO 2025-11-29 20:53:06,530 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:53:06,535 basehttp "GET / HTTP/1.1" 200 23676
+INFO 2025-11-29 20:53:42,393 basehttp "GET /register/ HTTP/1.1" 200 5048
+INFO 2025-11-29 20:53:47,564 basehttp "GET /login/ HTTP/1.1" 200 7565
+INFO 2025-11-29 20:53:55,479 basehttp "GET /password-reset/ HTTP/1.1" 200 3297
+INFO 2025-11-29 20:54:00,168 basehttp "POST /password-reset/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:54:00,178 basehttp "GET /password-reset/done/ HTTP/1.1" 200 3646
+INFO 2025-11-29 20:54:50,184 basehttp "GET /login/ HTTP/1.1" 200 7565
+INFO 2025-11-29 20:54:53,939 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:54:54,038 basehttp "GET /dashboard/ HTTP/1.1" 200 28377
+INFO 2025-11-29 20:54:59,627 basehttp "GET /issues/ HTTP/1.1" 200 14393
+INFO 2025-11-29 20:55:00,990 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 14393
+INFO 2025-11-29 20:55:02,249 basehttp "GET /issues/?status=open HTTP/1.1" 200 14393
+INFO 2025-11-29 20:55:03,116 basehttp "GET /labels/ HTTP/1.1" 200 16558
+INFO 2025-11-29 20:55:18,670 basehttp "GET /analytics/ HTTP/1.1" 200 21017
+INFO 2025-11-29 20:55:29,729 basehttp "GET /notifications/ HTTP/1.1" 200 14176
+INFO 2025-11-29 20:55:31,415 basehttp "GET /dashboard/ HTTP/1.1" 200 28377
+INFO 2025-11-29 20:55:33,524 basehttp "GET /settings/ HTTP/1.1" 200 35582
+INFO 2025-11-29 20:55:47,277 basehttp "POST /settings/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:55:47,375 basehttp "GET /settings/ HTTP/1.1" 200 35907
+INFO 2025-11-29 20:55:47,472 basehttp "GET /media/avatars/hope.webp HTTP/1.1" 200 7968
+INFO 2025-11-29 20:56:23,033 basehttp "GET /issues/export/?reporter=me HTTP/1.1" 200 114
+INFO 2025-11-29 20:56:31,209 basehttp "GET /dashboard/ HTTP/1.1" 200 28377
+INFO 2025-11-29 20:56:41,858 basehttp "GET /analytics/ HTTP/1.1" 200 21017
+INFO 2025-11-29 20:57:16,967 basehttp "GET /labels/ HTTP/1.1" 200 16558
+INFO 2025-11-29 20:57:20,008 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:57:20,012 basehttp "GET / HTTP/1.1" 200 23676
+INFO 2025-11-29 20:57:41,284 basehttp "GET /login/ HTTP/1.1" 200 7565
+INFO 2025-11-29 20:57:44,302 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:57:44,398 basehttp "GET /dashboard/ HTTP/1.1" 200 28377
+INFO 2025-11-29 20:57:46,603 basehttp "GET /labels/ HTTP/1.1" 200 16558
+INFO 2025-11-29 20:57:54,880 basehttp "GET /issues/create/ HTTP/1.1" 200 17681
+INFO 2025-11-29 20:58:38,229 basehttp "GET /issues/ HTTP/1.1" 200 14393
+INFO 2025-11-29 20:58:44,379 basehttp "GET /issues/create/ HTTP/1.1" 200 17681
+INFO 2025-11-29 20:59:35,942 basehttp "POST /issues/create/ HTTP/1.1" 302 0
+INFO 2025-11-29 20:59:36,058 basehttp "GET /issues/5/ HTTP/1.1" 200 14703
+INFO 2025-11-29 21:04:45,267 basehttp "GET /dashboard/ HTTP/1.1" 200 31838
+INFO 2025-11-29 21:05:33,536 basehttp "GET /notifications/ HTTP/1.1" 200 14176
+INFO 2025-11-29 21:05:36,693 basehttp "GET /dashboard/ HTTP/1.1" 200 31838
+INFO 2025-11-29 21:05:39,088 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 14393
+INFO 2025-11-29 21:05:45,063 basehttp "GET /dashboard/ HTTP/1.1" 200 31838
+INFO 2025-11-29 21:06:32,114 basehttp "GET /labels/ HTTP/1.1" 200 16558
+INFO 2025-11-29 21:06:47,955 basehttp "POST /labels/ HTTP/1.1" 302 0
+INFO 2025-11-29 21:06:48,050 basehttp "GET /labels/ HTTP/1.1" 200 17509
+INFO 2025-11-29 21:06:57,662 basehttp "GET /issues/create/ HTTP/1.1" 200 17828
+INFO 2025-11-29 21:07:06,149 basehttp "GET /issues/?status=open HTTP/1.1" 200 14960
+INFO 2025-11-29 21:08:16,262 basehttp "GET /dashboard/ HTTP/1.1" 200 31838
+INFO 2025-11-29 21:09:50,319 basehttp "GET /notifications/ HTTP/1.1" 200 14176
+INFO 2025-11-29 21:10:24,699 basehttp "GET /analytics/ HTTP/1.1" 200 21383
+INFO 2025-11-29 21:10:29,052 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 14393
+INFO 2025-11-29 21:10:31,588 basehttp "GET /dashboard/ HTTP/1.1" 200 31842
+INFO 2025-11-29 21:10:35,001 basehttp "GET /notifications/ HTTP/1.1" 200 14176
+INFO 2025-11-29 21:10:40,653 basehttp "GET /dashboard/ HTTP/1.1" 200 31842
+INFO 2025-11-29 21:12:37,897 basehttp "GET /issues/5/ HTTP/1.1" 200 14377
+INFO 2025-11-29 21:12:40,757 basehttp "GET /dashboard/ HTTP/1.1" 200 31842
+INFO 2025-11-29 21:12:50,732 basehttp "GET /labels/ HTTP/1.1" 200 17169
+INFO 2025-11-29 21:14:21,426 basehttp "GET /notifications/ HTTP/1.1" 200 14176
+INFO 2025-11-29 21:17:35,904 basehttp "GET /issues/create/ HTTP/1.1" 200 17828
+INFO 2025-11-29 21:19:50,063 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-29 21:19:50,068 basehttp "GET / HTTP/1.1" 200 23676
+INFO 2025-11-29 21:19:51,655 basehttp "GET /login/ HTTP/1.1" 200 7565
+INFO 2025-11-29 21:20:02,380 basehttp "POST /login/ HTTP/1.1" 200 7746
+INFO 2025-11-29 21:20:25,255 basehttp "POST /login/ HTTP/1.1" 200 7746
+INFO 2025-11-29 21:20:29,195 basehttp "GET /register/ HTTP/1.1" 200 5048
+INFO 2025-11-29 21:20:54,116 basehttp "POST /register/ HTTP/1.1" 200 5269
+INFO 2025-11-29 21:21:12,847 basehttp "POST /register/ HTTP/1.1" 302 0
+INFO 2025-11-29 21:21:12,934 basehttp "GET /dashboard/ HTTP/1.1" 200 28848
+INFO 2025-11-29 21:21:19,798 basehttp "GET /issues/create/ HTTP/1.1" 200 17861
+INFO 2025-11-29 21:29:36,639 basehttp "GET /dashboard/ HTTP/1.1" 200 28501
+INFO 2025-11-29 21:39:01,214 basehttp "GET /issues/create/ HTTP/1.1" 200 17861
+INFO 2025-11-29 21:40:12,183 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 14390
+INFO 2025-11-29 21:40:14,548 basehttp "GET /issues/ HTTP/1.1" 200 14958
+INFO 2025-11-29 21:40:20,220 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 14390
+INFO 2025-11-29 21:40:25,993 basehttp "GET /issues/ HTTP/1.1" 200 14958
+INFO 2025-11-29 21:48:54,898 basehttp "GET /dashboard/ HTTP/1.1" 200 28501
+INFO 2025-11-29 21:49:36,700 basehttp "GET /issues/?status=open HTTP/1.1" 200 14958
+INFO 2025-11-29 21:49:47,092 basehttp "GET /dashboard/ HTTP/1.1" 200 28501
+INFO 2025-11-29 21:51:09,556 basehttp "GET /labels/ HTTP/1.1" 200 17166
+INFO 2025-11-29 21:51:17,395 basehttp "GET /analytics/ HTTP/1.1" 200 21380
+INFO 2025-11-29 21:51:21,684 basehttp "GET /labels/ HTTP/1.1" 200 17166
+INFO 2025-11-29 21:52:03,288 basehttp "GET /issues/ HTTP/1.1" 200 14958
+INFO 2025-11-29 21:52:46,497 basehttp "GET /analytics/ HTTP/1.1" 200 21380
