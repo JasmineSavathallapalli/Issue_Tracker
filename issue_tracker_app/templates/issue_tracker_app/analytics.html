@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Analytics - IssueTracker{% endblock %}
+{% block page_title %}Analytics & Reports{% endblock %}
+
+{% block extra_css %}
+<style>
+    .chart-card {
+        height: 400px;
+    }
+    .metric-box {
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Summary Cards -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+            <div class="metric-box">
+                <h2 class="mb-0">{{ stats.total }}</h2>
+                <p class="mb-0">Total Issues</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="metric-box" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+                <h2 class="mb-0">{{ stats.resolved }}</h2>
+                <p class="mb-0">Resolved Issues</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="metric-box" style="background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);">
+                <h2 class="mb-0">{{ stats.avg_resolution_hours|default:"N/A" }}</h2>
+                <p class="mb-0">Avg Resolution (hours)</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="metric-box" style="background: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%);">
+                <h2 class="mb-0">{{ stats.open }}</h2>
+                <p class="mb-0">Open Issues</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0"><i class="bi bi-graph-up"></i> Issues Created Over Time</h5>
+                </div>
+                <div class="card-body chart-card">
+                    <canvas id="issuesOverTimeChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0"><i class="bi bi-pie-chart"></i> Issues by Category</h5>
+                </div>
+                <div class="card-body chart-card">
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Contributors -->
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0"><i class="bi bi-people"></i> Top Reporters</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Username</th>
+                                    <th>Issues Reported</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for reporter in top_reporters %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>{{ reporter.reporter__username }}</td>
+                                    <td><span class="badge bg-primary">{{ reporter.count }}</span></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0"><i class="bi bi-award"></i> Top Resolvers</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Username</th>
+                                    <th>Issues Resolved</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for resolver in top_resolvers %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>{{ resolver.assignee__username }}</td>
+                                    <td><span class="badge bg-success">{{ resolver.count }}</span></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+// Issues Over Time Chart
+const timeCtx = document.getElementById('issuesOverTimeChart');
+new Chart(timeCtx, {
+    type: 'line',
+    data: {
+        labels: {{ issues_per_day|safe }}.map(d => d.date),
+        datasets: [{
+            label: 'Issues Created',
+            data: {{ issues_per_day|safe }}.map(d => d.count),
+            borderColor: '#667eea',
+            backgroundColor: 'rgba(102, 126, 234, 0.1)',
+            tension: 0.4
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            }
+        }
+    }
+});
+
+// Category Chart
+const categoryCtx = document.getElementById('categoryChart');
+new Chart(categoryCtx, {
+    type: 'doughnut',
+    data: {
+        labels: {{ stats.by_category|safe }}.map(c => c.category),
+        datasets: [{
+            data: {{ stats.by_category|safe }}.map(c => c.count),
+            backgroundColor: [
+                '#dc3545', '#28a745', '#ffc107', '#17a2b8', '#6f42c1', '#fd7e14'
+            ]
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false
+    }
+});
+</script>
+{% endblock %}

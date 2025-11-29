@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Issue #{{ issue.id }} - Details{% endblock %}
+{% block page_title %}Issue Details{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h3>#{{ issue.id }} — {{ issue.title }}</h3>
+    <p class="text-muted">Created {{ issue.created_at|date:"M d, Y H:i" }}</p>
+
+    <div class="card p-4 shadow-sm mb-4">
+        <h5>Description</h5>
+        <p>{{ issue.description }}</p>
+
+        <hr>
+
+        <p><strong>Status:</strong> 
+            <span class="badge bg-success">{{ issue.status }}</span>
+        </p>
+
+        <p><strong>Priority:</strong> 
+            <span class="badge bg-secondary">{{ issue.priority }}</span>
+        </p>
+
+        <p><strong>Category:</strong> {{ issue.category }}</p>
+
+        <p><strong>Assigned To:</strong> 
+            {% if issue.assignee %}
+                {{ issue.assignee.username }}
+            {% else %}
+                <span class="text-muted">Not assigned</span>
+            {% endif %}
+        </p>
+
+        <p><strong>Reporter:</strong> {{ issue.reporter.username }}</p>
+    </div>
+
+    <a href="{% url 'issue_update' issue.id %}" class="btn btn-primary">Edit</a>
+    <a href="{% url 'issue_delete' issue.id %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'issue_list' %}" class="btn btn-secondary">Back</a>
+
+</div>
+
+{% endblock %}

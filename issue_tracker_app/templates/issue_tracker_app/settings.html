@@ -1,0 +1,438 @@
+<!-- ============================================ -->
+<!-- FILE: templates/issue_tracker_app/settings.html -->
+<!-- ============================================ -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Settings - IssueTracker{% endblock %}
+{% block page_title %}Settings{% endblock %}
+
+{% block extra_css %}
+<style>
+    .settings-card {
+        border: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+    }
+    .settings-card-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-bottom: none;
+        padding: 15px 20px;
+    }
+    .avatar-preview {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #667eea;
+    }
+    .avatar-placeholder {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        color: white;
+        font-weight: bold;
+        border: 4px solid #667eea;
+    }
+    .settings-section {
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    .settings-section:last-child {
+        border-bottom: none;
+    }
+    .form-switch .form-check-input {
+        width: 3em;
+        height: 1.5em;
+    }
+    .stat-badge {
+        padding: 8px 15px;
+        border-radius: 8px;
+        background: #f8f9fa;
+        display: inline-block;
+        margin: 5px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <!-- Sidebar Navigation -->
+        <div class="col-lg-3 mb-4">
+            <div class="list-group shadow-sm">
+                <a href="#profile" class="list-group-item list-group-item-action active" data-bs-toggle="list">
+                    <i class="bi bi-person-circle"></i> Profile
+                </a>
+                <a href="#account" class="list-group-item list-group-item-action" data-bs-toggle="list">
+                    <i class="bi bi-gear"></i> Account
+                </a>
+                <a href="#notifications" class="list-group-item list-group-item-action" data-bs-toggle="list">
+                    <i class="bi bi-bell"></i> Notifications
+                </a>
+                <a href="#statistics" class="list-group-item list-group-item-action" data-bs-toggle="list">
+                    <i class="bi bi-graph-up"></i> My Statistics
+                </a>
+            </div>
+        </div>
+
+        <!-- Settings Content -->
+        <div class="col-lg-9">
+            <div class="tab-content">
+                <!-- Profile Settings -->
+                <div class="tab-pane fade show active" id="profile">
+                    <div class="card settings-card">
+                        <div class="card-header settings-card-header">
+                            <h5 class="mb-0"><i class="bi bi-person-circle"></i> Profile Settings</h5>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                
+                                <!-- Avatar Section -->
+                                <div class="settings-section">
+                                    <h6 class="mb-3">Profile Picture</h6>
+                                    <div class="d-flex align-items-center">
+                                        <div class="me-4">
+                                            {% if request.user.profile.avatar %}
+                                            <img src="{{ request.user.profile.avatar.url }}" alt="Avatar" class="avatar-preview" id="avatarPreview">
+                                            {% else %}
+                                            <div class="avatar-placeholder" id="avatarPlaceholder">
+                                                {{ request.user.username|first|upper }}
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                        <div>
+                                            <div class="mb-2">
+                                                {{ profile_form.avatar }}
+                                            </div>
+                                            <small class="text-muted">
+                                                Recommended: Square image, at least 200x200px. Max 2MB.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Personal Information -->
+                                <div class="settings-section">
+                                    <h6 class="mb-3">Personal Information</h6>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Username</label>
+                                            <input type="text" class="form-control" value="{{ request.user.username }}" disabled>
+                                            <small class="text-muted">Username cannot be changed</small>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" class="form-control" value="{{ request.user.email }}" disabled>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="{{ profile_form.phone.id_for_label }}" class="form-label">Phone Number</label>
+                                            {{ profile_form.phone }}
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="{{ profile_form.department.id_for_label }}" class="form-label">Department</label>
+                                            {{ profile_form.department }}
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="{{ profile_form.bio.id_for_label }}" class="form-label">Bio</label>
+                                            {{ profile_form.bio }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Notification Preferences -->
+                                <div class="settings-section">
+                                    <h6 class="mb-3">Notification Preferences</h6>
+                                    <div class="form-check form-switch mb-3">
+                                        {{ profile_form.notification_enabled }}
+                                        <label class="form-check-label" for="{{ profile_form.notification_enabled.id_for_label }}">
+                                            <strong>Enable In-App Notifications</strong>
+                                            <br>
+                                            <small class="text-muted">Receive notifications within the application</small>
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        {{ profile_form.email_notifications }}
+                                        <label class="form-check-label" for="{{ profile_form.email_notifications.id_for_label }}">
+                                            <strong>Enable Email Notifications</strong>
+                                            <br>
+                                            <small class="text-muted">Receive email notifications for important updates</small>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Save Button -->
+                                <div class="settings-section">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi bi-save"></i> Save Changes
+                                    </button>
+                                    <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary ms-2">
+                                        Cancel
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Account Settings -->
+                <div class="tab-pane fade" id="account">
+                    <div class="card settings-card">
+                        <div class="card-header settings-card-header">
+                            <h5 class="mb-0"><i class="bi bi-gear"></i> Account Settings</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="settings-section">
+                                <h6 class="mb-3">Account Information</h6>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Username:</strong></td>
+                                                <td>{{ request.user.username }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Email:</strong></td>
+                                                <td>{{ request.user.email }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Date Joined:</strong></td>
+                                                <td>{{ request.user.date_joined|date:"F d, Y" }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Last Login:</strong></td>
+                                                <td>{{ request.user.last_login|date:"F d, Y H:i" }}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="settings-section">
+                                <h6 class="mb-3">Password</h6>
+                                <p class="text-muted mb-3">Change your password to keep your account secure</p>
+                                <a href="{% url 'password_reset' %}" class="btn btn-outline-primary">
+                                    <i class="bi bi-key"></i> Change Password
+                                </a>
+                            </div>
+
+                            <div class="settings-section">
+                                <h6 class="mb-3 text-danger">Danger Zone</h6>
+                                <p class="text-muted mb-3">Irreversible actions that affect your account</p>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">
+                                    <i class="bi bi-trash"></i> Delete Account
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Tab -->
+                <div class="tab-pane fade" id="notifications">
+                    <div class="card settings-card">
+                        <div class="card-header settings-card-header">
+                            <h5 class="mb-0"><i class="bi bi-bell"></i> Notification Settings</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="settings-section">
+                                <h6 class="mb-3">Email Notifications</h6>
+                                <p class="text-muted mb-3">Choose what email notifications you want to receive</p>
+                                
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="emailAssigned" checked>
+                                    <label class="form-check-label" for="emailAssigned">
+                                        <strong>Assigned to Issue</strong>
+                                        <br>
+                                        <small class="text-muted">When someone assigns you to an issue</small>
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="emailComment" checked>
+                                    <label class="form-check-label" for="emailComment">
+                                        <strong>New Comments</strong>
+                                        <br>
+                                        <small class="text-muted">When someone comments on your issues</small>
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="emailStatus" checked>
+                                    <label class="form-check-label" for="emailStatus">
+                                        <strong>Status Changes</strong>
+                                        <br>
+                                        <small class="text-muted">When issue status is updated</small>
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="emailMentioned">
+                                    <label class="form-check-label" for="emailMentioned">
+                                        <strong>Mentions</strong>
+                                        <br>
+                                        <small class="text-muted">When someone mentions you in a comment</small>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="settings-section">
+                                <h6 class="mb-3">In-App Notifications</h6>
+                                <p class="text-muted mb-3">Manage your in-app notification preferences</p>
+                                
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" id="appNotifications" checked>
+                                    <label class="form-check-label" for="appNotifications">
+                                        <strong>Enable all in-app notifications</strong>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="settings-section">
+                                <button type="button" class="btn btn-primary">
+                                    <i class="bi bi-save"></i> Save Notification Settings
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistics Tab -->
+                <div class="tab-pane fade" id="statistics">
+                    <div class="card settings-card">
+                        <div class="card-header settings-card-header">
+                            <h5 class="mb-0"><i class="bi bi-graph-up"></i> My Statistics</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="settings-section">
+                                <h6 class="mb-3">Activity Overview</h6>
+                                <div class="row text-center">
+                                    <div class="col-md-3 mb-3">
+                                        <div class="stat-badge w-100">
+                                            <h3 class="mb-0 text-primary">{{ request.user.reported_issues.count }}</h3>
+                                            <small class="text-muted">Issues Reported</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="stat-badge w-100">
+                                            <h3 class="mb-0 text-success">{{ request.user.assigned_issues.count }}</h3>
+                                            <small class="text-muted">Assigned to Me</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="stat-badge w-100">
+                                            <h3 class="mb-0 text-info">{{ request.user.assigned_issues.filter.count }}</h3>
+                                            <small class="text-muted">Resolved</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="stat-badge w-100">
+                                            <h3 class="mb-0 text-warning">{{ request.user.watched_issues.count }}</h3>
+                                            <small class="text-muted">Watching</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-section">
+                                <h6 class="mb-3">Recent Activity</h6>
+                                <div class="list-group">
+                                    {% for activity in request.user.activitylog_set.all|slice:":5" %}
+                                    <div class="list-group-item">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">{{ activity.action|title }}</h6>
+                                            <small>{{ activity.timestamp|timesince }} ago</small>
+                                        </div>
+                                        <p class="mb-1">{{ activity.details }}</p>
+                                        <small class="text-muted">Issue #{{ activity.issue.id }}</small>
+                                    </div>
+                                    {% empty %}
+                                    <div class="text-center py-4 text-muted">
+                                        <i class="bi bi-inbox fs-1 d-block mb-2"></i>
+                                        No recent activity
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="settings-section">
+                                <h6 class="mb-3">Export Data</h6>
+                                <p class="text-muted mb-3">Download all your data from IssueTracker</p>
+                                <a href="{% url 'export_issues' %}?reporter=me" class="btn btn-outline-primary">
+                                    <i class="bi bi-download"></i> Export My Issues
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Account Modal -->
+<div class="modal fade" id="deleteAccountModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-exclamation-triangle"></i> Delete Account
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Warning:</strong> This action cannot be undone!</p>
+                <p>Deleting your account will:</p>
+                <ul>
+                    <li>Permanently delete your profile</li>
+                    <li>Remove all your reported issues</li>
+                    <li>Remove all your comments</li>
+                    <li>Unassign you from all issues</li>
+                </ul>
+                <p class="text-danger">Are you absolutely sure you want to delete your account?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger">
+                    <i class="bi bi-trash"></i> Yes, Delete My Account
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Preview avatar on file select
+document.addEventListener('DOMContentLoaded', function() {
+    const avatarInput = document.getElementById('id_avatar');
+    
+    if (avatarInput) {
+        avatarInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('avatarPreview');
+                    const placeholder = document.getElementById('avatarPlaceholder');
+                    
+                    if (preview) {
+                        preview.src = e.target.result;
+                    } else if (placeholder) {
+                        placeholder.outerHTML = `<img src="${e.target.result}" alt="Avatar" class="avatar-preview" id="avatarPreview">`;
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,646 @@
+INFO 2025-11-29 11:29:29,519 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:29:51,390 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\apps.py changed, reloading.
+INFO 2025-11-29 11:29:52,019 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:30:15,888 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\manage.py changed, reloading.
+INFO 2025-11-29 11:30:16,505 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:35:13,615 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:37:01,355 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\apps.py changed, reloading.
+INFO 2025-11-29 11:37:01,752 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\apps.py changed, reloading.
+INFO 2025-11-29 11:37:01,988 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:37:02,315 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:37:25,876 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\apps.py changed, reloading.
+INFO 2025-11-29 11:37:26,131 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\apps.py changed, reloading.
+INFO 2025-11-29 11:37:26,454 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:37:26,671 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:38:57,143 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:41:01,543 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:42:01,617 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:43:02,398 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:43:02,937 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:43:22,369 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:44:33,401 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:44:33,448 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:44:33,985 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:44:34,028 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:44:37,305 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:44:37,335 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:44:37,936 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:44:37,957 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:44:49,204 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:45:32,570 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:45:32,576 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:45:33,136 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:45:33,136 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:45:37,484 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:45:37,506 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:45:38,047 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:45:38,052 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:45:49,242 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:46:29,547 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:46:29,551 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:46:30,123 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:46:30,123 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:46:31,434 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:46:31,437 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:46:32,134 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:46:32,134 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:46:47,824 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:46:47,829 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 11:46:48,396 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:46:48,397 autoreload Watching for file changes with StatReloader
+ERROR 2025-11-29 11:46:52,952 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapper_view
+    if test_func(request.user):
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 51, in <lambda>
+    lambda u: u.is_authenticated,
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\query.py", line 635, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2025-11-29 11:46:53,018 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\middleware.py", line 48, in process_response
+    if request.session.get_expire_at_browser_close():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 285, in get_expire_at_browser_close
+    if (expiry := self.get("_session_expiry")) is None:
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 68, in get
+    return self._session.get(key, default)
+           ^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\query.py", line 635, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\query.py", line 1886, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2025-11-29 11:46:53,022 basehttp "GET / HTTP/1.1" 500 167025
+INFO 2025-11-29 11:48:02,556 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 11:48:03,008 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 11:48:03,038 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 11:48:03,241 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 11:48:03,399 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:48:03,978 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:48:04,041 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:48:04,248 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:48:10,633 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 11:48:10,666 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 11:48:10,844 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 11:48:11,194 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker\settings.py changed, reloading.
+INFO 2025-11-29 11:48:11,352 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:48:11,357 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:48:11,579 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 11:48:11,945 autoreload Watching for file changes with StatReloader
+WARNING 2025-11-29 11:48:37,904 base Session data corrupted
+INFO 2025-11-29 11:48:37,913 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-11-29 11:48:37,973 basehttp "GET /login/?next=/ HTTP/1.1" 200 3605
+INFO 2025-11-29 11:48:46,343 basehttp "POST /login/?next=/ HTTP/1.1" 302 0
+ERROR 2025-11-29 11:48:46,477 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "issue_tracker_app_notification" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "issue_tracker_app_notific...
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py", line 70, in dashboard
+    unread_notifications = request.user.notifications.filter(is_read=False).count()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\query.py", line 610, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\sql\query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\sql\query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "issue_tracker_app_notification" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "issue_tracker_app_notific...
+                                          ^
+
+ERROR 2025-11-29 11:48:46,481 basehttp "GET / HTTP/1.1" 500 134469
+INFO 2025-11-29 11:48:50,772 basehttp "GET /login/?next=/ HTTP/1.1" 302 0
+INFO 2025-11-29 11:52:26,389 autoreload Watching for file changes with StatReloader
+ERROR 2025-11-29 11:52:32,379 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "issue_tracker_app_notification" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "issue_tracker_app_notific...
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py", line 70, in dashboard
+    unread_notifications = request.user.notifications.filter(is_read=False).count()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\query.py", line 610, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\sql\query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\sql\query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "issue_tracker_app_notification" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "issue_tracker_app_notific...
+                                          ^
+
+ERROR 2025-11-29 11:52:32,391 basehttp "GET / HTTP/1.1" 500 134168
+INFO 2025-11-29 12:00:32,166 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:00:35,033 basehttp "GET / HTTP/1.1" 200 29409
+INFO 2025-11-29 12:00:59,811 basehttp "GET /issues/ HTTP/1.1" 200 9171
+INFO 2025-11-29 12:01:01,387 basehttp "GET /issues/?assignee=1 HTTP/1.1" 200 7759
+INFO 2025-11-29 12:01:02,817 basehttp "GET /issues/?status=open HTTP/1.1" 200 9171
+INFO 2025-11-29 12:01:09,285 basehttp "GET /labels/ HTTP/1.1" 200 9351
+INFO 2025-11-29 12:01:12,995 basehttp "GET / HTTP/1.1" 200 29409
+INFO 2025-11-29 12:01:22,919 basehttp "GET /issues/?status=open HTTP/1.1" 200 9171
+INFO 2025-11-29 12:01:26,997 basehttp "GET /issues/?status=in_progress HTTP/1.1" 200 7186
+INFO 2025-11-29 12:01:48,304 basehttp "GET /issues/create/ HTTP/1.1" 200 10438
+INFO 2025-11-29 12:01:53,784 basehttp "GET /issues/ HTTP/1.1" 200 9171
+INFO 2025-11-29 12:02:02,186 basehttp "GET / HTTP/1.1" 200 29409
+INFO 2025-11-29 12:02:05,657 basehttp "GET /issues/create/ HTTP/1.1" 200 10438
+INFO 2025-11-29 12:02:36,311 basehttp "GET /issues/ HTTP/1.1" 200 9171
+INFO 2025-11-29 12:02:40,450 basehttp "GET /issues/?status=open HTTP/1.1" 200 9171
+INFO 2025-11-29 12:02:53,127 basehttp "GET /issues/?reporter=me HTTP/1.1" 200 9171
+INFO 2025-11-29 12:03:25,151 basehttp "GET / HTTP/1.1" 200 29409
+INFO 2025-11-29 12:03:41,809 basehttp "GET /issues/ HTTP/1.1" 200 9171
+INFO 2025-11-29 12:03:43,417 basehttp "GET / HTTP/1.1" 200 29409
+ERROR 2025-11-29 12:04:05,906 log Internal Server Error: /analytics/
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py", line 504, in analytics
+    return render(request, 'issue_tracker_app/analytics.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: issue_tracker_app/analytics.html
+ERROR 2025-11-29 12:04:05,911 basehttp "GET /analytics/ HTTP/1.1" 500 105299
+INFO 2025-11-29 12:04:10,203 basehttp "GET /labels/ HTTP/1.1" 200 9351
+INFO 2025-11-29 12:04:13,222 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 7759
+INFO 2025-11-29 12:04:16,211 basehttp "GET /issues/create/ HTTP/1.1" 200 10438
+INFO 2025-11-29 12:05:34,014 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-29 12:05:34,025 basehttp "GET /login/ HTTP/1.1" 200 3604
+INFO 2025-11-29 12:05:40,382 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-11-29 12:05:40,640 basehttp "GET / HTTP/1.1" 200 29409
+INFO 2025-11-29 12:06:27,548 basehttp "GET /issues/?status=open HTTP/1.1" 200 9171
+INFO 2025-11-29 12:08:15,657 basehttp "GET /issues/?reporter=me HTTP/1.1" 200 9171
+INFO 2025-11-29 12:08:23,494 basehttp "GET /issues/?reporter=me HTTP/1.1" 200 9171
+INFO 2025-11-29 12:08:42,236 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 7759
+INFO 2025-11-29 12:08:58,507 basehttp "GET /issues/ HTTP/1.1" 200 9171
+INFO 2025-11-29 12:08:59,654 basehttp "GET /issues/?assignee=1 HTTP/1.1" 200 7759
+INFO 2025-11-29 12:09:00,364 basehttp "GET /issues/?status=open HTTP/1.1" 200 9171
+INFO 2025-11-29 12:09:00,996 basehttp "GET /labels/ HTTP/1.1" 200 9351
+INFO 2025-11-29 12:09:02,188 basehttp "GET / HTTP/1.1" 200 29409
+INFO 2025-11-29 12:14:00,276 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:14:00,281 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:14:00,317 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:14:00,341 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:14:00,423 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:14:00,434 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:14:01,703 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:14:01,708 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:14:01,709 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:14:01,727 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:14:01,760 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:14:01,793 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:15:09,712 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:15:09,715 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:15:09,724 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:15:09,732 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:15:09,744 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:15:10,053 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 12:15:11,182 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:15:11,188 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:15:11,200 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:15:11,227 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:15:11,244 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 12:15:11,468 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:05:58,472 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\ml_utils.py changed, reloading.
+INFO 2025-11-29 13:05:58,490 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\ml_utils.py changed, reloading.
+INFO 2025-11-29 13:05:58,513 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\ml_utils.py changed, reloading.
+INFO 2025-11-29 13:05:58,513 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\ml_utils.py changed, reloading.
+INFO 2025-11-29 13:05:58,521 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\ml_utils.py changed, reloading.
+INFO 2025-11-29 13:05:58,685 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\ml_utils.py changed, reloading.
+INFO 2025-11-29 13:05:59,660 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:05:59,661 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:05:59,662 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:05:59,664 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:05:59,668 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:05:59,712 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:06:03,535 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 13:06:03,538 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 13:06:03,547 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 13:06:03,553 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 13:06:03,571 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 13:06:03,572 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py changed, reloading.
+INFO 2025-11-29 13:06:04,672 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:06:04,678 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:06:04,686 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:06:04,687 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:06:04,690 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:06:04,726 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:07:33,491 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 13:07:33,499 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 13:07:33,501 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 13:07:33,504 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 13:07:33,520 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 13:07:33,523 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\utils.py changed, reloading.
+INFO 2025-11-29 13:07:34,554 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:07:34,555 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:07:34,555 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:07:34,571 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:07:34,580 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:07:34,589 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:08:13,665 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:08:13,677 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:08:13,681 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:08:13,698 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:08:13,701 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:08:13,716 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:08:14,726 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:08:14,726 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:08:14,726 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:08:14,726 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:08:14,727 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:08:14,730 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:08:26,315 basehttp "GET / HTTP/1.1" 200 29428
+INFO 2025-11-29 13:08:35,454 basehttp "GET /issues/create/ HTTP/1.1" 200 10438
+INFO 2025-11-29 13:08:43,730 basehttp "GET / HTTP/1.1" 200 29428
+INFO 2025-11-29 13:08:48,962 basehttp "GET /issues/ HTTP/1.1" 200 9173
+INFO 2025-11-29 13:08:50,870 basehttp "GET /issues/?assignee=1 HTTP/1.1" 200 7759
+INFO 2025-11-29 13:08:52,607 basehttp "GET /issues/?assignee=1 HTTP/1.1" 200 7759
+INFO 2025-11-29 13:08:53,234 basehttp "GET /issues/?status=open HTTP/1.1" 200 9173
+INFO 2025-11-29 13:08:55,667 basehttp "GET /labels/ HTTP/1.1" 200 9351
+INFO 2025-11-29 13:08:57,724 basehttp "GET / HTTP/1.1" 200 29428
+INFO 2025-11-29 13:09:11,477 basehttp "GET /issues/create/ HTTP/1.1" 200 10438
+INFO 2025-11-29 13:09:22,942 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:09:22,943 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:09:22,944 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:09:22,950 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:09:22,958 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:09:22,966 autoreload C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\signals.py changed, reloading.
+INFO 2025-11-29 13:09:23,928 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:09:23,931 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:09:23,931 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:09:23,933 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:09:23,936 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 13:09:29,678 basehttp "GET / HTTP/1.1" 200 29428
+INFO 2025-11-29 13:10:48,444 basehttp "GET /issues/?status=open HTTP/1.1" 200 9173
+INFO 2025-11-29 13:10:51,632 basehttp "GET /issues/?status=in_progress HTTP/1.1" 200 7186
+INFO 2025-11-29 13:11:04,797 basehttp "GET /issues/?status=in_progress HTTP/1.1" 200 7186
+INFO 2025-11-29 14:08:14,802 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 14:08:17,288 basehttp "GET / HTTP/1.1" 200 29428
+ERROR 2025-11-29 14:08:39,805 log Internal Server Error: /analytics/
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py", line 504, in analytics
+    return render(request, 'issue_tracker_app/analytics.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: issue_tracker_app/analytics.html
+ERROR 2025-11-29 14:08:39,811 basehttp "GET /analytics/ HTTP/1.1" 500 107710
+INFO 2025-11-29 14:10:15,755 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 7759
+INFO 2025-11-29 14:18:27,758 basehttp "GET / HTTP/1.1" 200 23948
+INFO 2025-11-29 14:51:26,365 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 14:51:28,331 basehttp "GET / HTTP/1.1" 200 23511
+INFO 2025-11-29 14:51:46,956 basehttp "GET /issues/?status=open HTTP/1.1" 200 9173
+INFO 2025-11-29 14:51:50,897 basehttp "GET /issues/?status=in_progress HTTP/1.1" 200 7186
+INFO 2025-11-29 14:51:56,804 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 7759
+INFO 2025-11-29 14:52:15,384 basehttp "GET /issues/ HTTP/1.1" 200 9173
+INFO 2025-11-29 14:52:17,225 basehttp "GET /issues/?assignee=1 HTTP/1.1" 200 7759
+INFO 2025-11-29 14:52:17,953 basehttp "GET /issues/?status=open HTTP/1.1" 200 9173
+INFO 2025-11-29 14:52:18,598 basehttp "GET /labels/ HTTP/1.1" 200 9351
+INFO 2025-11-29 14:52:19,904 basehttp "GET / HTTP/1.1" 200 23511
+ERROR 2025-11-29 14:57:37,379 log Internal Server Error: /analytics/
+Traceback (most recent call last):
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\issue_tracker_app\views.py", line 504, in analytics
+    return render(request, 'issue_tracker_app/analytics.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\savat\OneDrive\Documents\Issue_Tracker\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: issue_tracker_app/analytics.html
+ERROR 2025-11-29 14:57:37,384 basehttp "GET /analytics/ HTTP/1.1" 500 107710
+INFO 2025-11-29 14:57:55,633 basehttp "GET / HTTP/1.1" 200 23511
+WARNING 2025-11-29 14:57:57,801 log Not Found: /favicon.ico
+WARNING 2025-11-29 14:57:57,801 basehttp "GET /favicon.ico HTTP/1.1" 404 5815
+INFO 2025-11-29 14:57:58,173 basehttp "GET / HTTP/1.1" 200 23511
+WARNING 2025-11-29 14:57:58,740 log Not Found: /favicon.ico
+WARNING 2025-11-29 14:57:58,740 basehttp "GET /favicon.ico HTTP/1.1" 404 5815
+INFO 2025-11-29 15:04:21,560 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 15:04:23,576 basehttp "GET / HTTP/1.1" 200 23511
+INFO 2025-11-29 15:04:27,593 basehttp "GET /analytics/ HTTP/1.1" 200 14236
+INFO 2025-11-29 15:05:22,227 basehttp "GET / HTTP/1.1" 200 23511
+INFO 2025-11-29 15:07:24,663 basehttp "GET /issues/ HTTP/1.1" 200 9173
+INFO 2025-11-29 15:07:26,007 basehttp "GET /issues/?assignee=1 HTTP/1.1" 200 7759
+INFO 2025-11-29 15:07:26,618 basehttp "GET /issues/?status=open HTTP/1.1" 200 9173
+INFO 2025-11-29 15:07:27,350 basehttp "GET /labels/ HTTP/1.1" 200 9351
+INFO 2025-11-29 15:07:28,885 basehttp "GET / HTTP/1.1" 200 23511
+INFO 2025-11-29 15:07:32,538 basehttp "GET /issues/create/ HTTP/1.1" 200 10438
+INFO 2025-11-29 15:07:35,279 basehttp "GET / HTTP/1.1" 200 23511
+INFO 2025-11-29 15:07:36,265 basehttp "GET /issues/create/ HTTP/1.1" 200 10438
+INFO 2025-11-29 15:07:43,185 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-29 15:07:43,200 basehttp "GET /login/ HTTP/1.1" 200 3604
+INFO 2025-11-29 15:07:46,396 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-11-29 15:07:46,519 basehttp "GET / HTTP/1.1" 200 23511
+INFO 2025-11-29 15:09:11,368 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 15:09:13,505 basehttp "GET / HTTP/1.1" 200 23511
+INFO 2025-11-29 15:09:17,258 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-29 15:09:17,264 basehttp "GET /login/ HTTP/1.1" 200 3604
+INFO 2025-11-29 15:09:28,026 basehttp "GET /register/ HTTP/1.1" 200 5048
+INFO 2025-11-29 15:09:57,550 basehttp "POST /register/ HTTP/1.1" 302 0
+INFO 2025-11-29 15:09:57,654 basehttp "GET / HTTP/1.1" 200 18859
+INFO 2025-11-29 15:10:20,977 basehttp "GET /issues/ HTTP/1.1" 200 9170
+INFO 2025-11-29 15:10:24,582 basehttp "GET /issues/?assignee=4 HTTP/1.1" 200 7183
+INFO 2025-11-29 15:10:26,411 basehttp "GET /issues/?status=open HTTP/1.1" 200 9170
+INFO 2025-11-29 15:10:27,811 basehttp "GET /labels/ HTTP/1.1" 200 9348
+INFO 2025-11-29 15:10:29,192 basehttp "GET / HTTP/1.1" 200 18587
+INFO 2025-11-29 15:10:37,574 basehttp "GET / HTTP/1.1" 200 18587
+WARNING 2025-11-29 15:10:38,142 log Not Found: /favicon.ico
+WARNING 2025-11-29 15:10:38,143 basehttp "GET /favicon.ico HTTP/1.1" 404 5815
+INFO 2025-11-29 15:10:43,843 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-11-29 15:10:43,850 basehttp "GET /login/ HTTP/1.1" 200 3604
+INFO 2025-11-29 15:10:47,257 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-11-29 15:10:47,363 basehttp "GET / HTTP/1.1" 200 23511
+INFO 2025-11-29 15:12:59,657 basehttp "GET / HTTP/1.1" 200 23488
+WARNING 2025-11-29 15:13:00,286 log Not Found: /favicon.ico
+WARNING 2025-11-29 15:13:00,286 basehttp "GET /favicon.ico HTTP/1.1" 404 5815
+INFO 2025-11-29 15:13:01,535 basehttp "GET / HTTP/1.1" 200 23488
+WARNING 2025-11-29 15:13:02,143 log Not Found: /favicon.ico
+WARNING 2025-11-29 15:13:02,143 basehttp "GET /favicon.ico HTTP/1.1" 404 5815
+INFO 2025-11-29 15:13:41,088 autoreload Watching for file changes with StatReloader
+INFO 2025-11-29 15:13:44,094 basehttp "GET / HTTP/1.1" 200 23510
+INFO 2025-11-29 15:13:56,709 basehttp "GET /issues/create/ HTTP/1.1" 200 10477
+INFO 2025-11-29 15:17:20,432 basehttp "POST /issues/create/ HTTP/1.1" 302 0
+INFO 2025-11-29 15:17:20,534 basehttp "GET /issues/4/ HTTP/1.1" 200 7420
+INFO 2025-11-29 15:17:31,593 basehttp "GET /issues/4/update/ HTTP/1.1" 200 10905
+INFO 2025-11-29 15:17:34,053 basehttp "POST /issues/4/update/ HTTP/1.1" 302 0
+INFO 2025-11-29 15:17:34,147 basehttp "GET /issues/4/ HTTP/1.1" 200 7416
+INFO 2025-11-29 15:17:36,316 basehttp "GET / HTTP/1.1" 200 25375
+INFO 2025-11-29 15:17:46,904 basehttp "GET /issues/4/ HTTP/1.1" 200 7169
+INFO 2025-11-29 15:20:55,220 basehttp "GET /issues/create/ HTTP/1.1" 200 10477
+INFO 2025-11-29 15:21:27,534 basehttp "GET /issues/?assignee=me HTTP/1.1" 200 7762
+INFO 2025-11-29 15:22:07,985 basehttp "GET /issues/?status=open HTTP/1.1" 200 9868
+INFO 2025-11-29 15:22:10,132 basehttp "GET /issues/4/ HTTP/1.1" 200 7169
+INFO 2025-11-29 15:22:15,746 basehttp "GET /issues/4/ HTTP/1.1" 200 7169

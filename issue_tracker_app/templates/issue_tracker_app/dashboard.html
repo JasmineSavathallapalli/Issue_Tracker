@@ -1,0 +1,408 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard - IssueTracker{% endblock %}
+{% block page_title %}Dashboard Overview{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Metric cards */
+    .metric-card {
+        transition: 0.3s ease;
+        border-left: 4px solid;
+        height: 100%;
+    }
+    .metric-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    .metric-icon {
+        width: 55px;
+        height: 55px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+    }
+
+    /* FIX: Chart containers */
+    .chart-wrapper {
+        position: relative;
+        height: 260px !important;
+        width: 100%;
+    }
+
+    /* Quick Action buttons */
+    .quick-action-btn {
+        border: 2px dashed #d7d7d7;
+        transition: 0.25s;
+    }
+    .quick-action-btn:hover {
+        border-color: #0d6efd;
+        background: #f8f9fa;
+    }
+
+    /* Activity timeline */
+    .activity-item {
+        padding-left: 20px;
+        position: relative;
+        border-left: 2px solid #e9ecef;
+        margin-bottom: 20px;
+    }
+    .activity-dot {
+        position: absolute;
+        left: -6px;
+        top: 4px;
+        width: 12px;
+        height: 12px;
+        background: #0d6efd;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 2px #0d6efd;
+    }
+
+    /* Mobile layout fixes */
+    @media (max-width: 768px) {
+        .metric-card h2 {
+            font-size: 1.6rem;
+        }
+        .chart-wrapper {
+            height: 220px !important;
+        }
+    }
+</style>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container-fluid">
+
+    <!-- Welcome Header (NO Create Issue Button) -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2 class="mb-1">Welcome back, {{ request.user.first_name|default:request.user.username }} 👋</h2>
+            <p class="text-muted mb-0">Here’s what’s happening with your issues today</p>
+        </div>
+    </div>
+
+
+    <!-- Statistics Cards -->
+    <div class="row g-4 mb-4">
+        <!-- Total -->
+        <div class="col-xl-3 col-md-6">
+            <div class="card metric-card shadow-sm border-0" style="border-left-color:#0d6efd;">
+                <div class="card-body d-flex align-items-center">
+                    <div class="metric-icon bg-primary bg-opacity-10 text-primary me-3">
+                        <i class="bi bi-clipboard-data"></i>
+                    </div>
+                    <div>
+                        <p class="text-muted small mb-1">Total Issues</p>
+                        <h2 class="fw-bold mb-0">{{ stats.total }}</h2>
+                        <small class="text-success">↑ {{ stats.recent }} new this week</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Open -->
+        <div class="col-xl-3 col-md-6">
+            <div class="card metric-card shadow-sm border-0" style="border-left-color:#28a745;">
+                <div class="card-body d-flex align-items-center">
+                    <div class="metric-icon bg-success bg-opacity-10 text-success me-3">
+                        <i class="bi bi-exclamation-circle"></i>
+                    </div>
+                    <div>
+                        <p class="text-muted small mb-1">Open Issues</p>
+                        <h2 class="fw-bold mb-0">{{ stats.open }}</h2>
+                        <a href="{% url 'issue_list' %}?status=open" class="small text-decoration-none">
+                            View all <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- In Progress -->
+        <div class="col-xl-3 col-md-6">
+            <div class="card metric-card shadow-sm border-0" style="border-left-color:#17a2b8;">
+                <div class="card-body d-flex align-items-center">
+                    <div class="metric-icon bg-info bg-opacity-10 text-info me-3">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <div>
+                        <p class="text-muted small mb-1">In Progress</p>
+                        <h2 class="fw-bold mb-0">{{ stats.in_progress }}</h2>
+                        <a href="{% url 'issue_list' %}?status=in_progress" class="small text-decoration-none">
+                            View progress <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resolved -->
+        <div class="col-xl-3 col-md-6">
+            <div class="card metric-card shadow-sm border-0" style="border-left-color:#6f42c1;">
+                <div class="card-body d-flex align-items-center">
+                    <div class="metric-icon bg-purple bg-opacity-10 text-purple me-3">
+                        <i class="bi bi-check-circle"></i>
+                    </div>
+                    <div>
+                        <p class="text-muted small mb-1">Resolved</p>
+                        <h2 class="fw-bold mb-0">{{ stats.resolved }}</h2>
+                        {% if stats.avg_resolution_hours %}
+                             <small class="text-muted"><i class="bi bi-clock"></i> Avg: {{ stats.avg_resolution_hours }} hrs</small>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main Grid -->
+    <div class="row g-4">
+        <!-- LEFT COLUMN -->
+        <div class="col-xl-8">
+
+            <!-- Quick Actions -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body">
+                    <h5 class="mb-3"><i class="bi bi-lightning-charge text-warning"></i> Quick Actions</h5>
+
+                    <div class="row g-3">
+                        <div class="col-6 col-md-3">
+                            <a href="{% url 'issue_create' %}" class="btn quick-action-btn w-100 p-3 text-center">
+                                <i class="bi bi-plus-circle fs-3 text-primary d-block"></i>
+                                <small>New Issue</small>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <a href="{% url 'issue_list' %}?assignee=me" class="btn quick-action-btn w-100 p-3 text-center">
+                                <i class="bi bi-person-check fs-3 text-success d-block"></i>
+                                <small>My Tasks</small>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <a href="{% url 'analytics' %}" class="btn quick-action-btn w-100 p-3 text-center">
+                                <i class="bi bi-graph-up fs-3 text-info d-block"></i>
+                                <small>Analytics</small>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <a href="{% url 'label_list' %}" class="btn quick-action-btn w-100 p-3 text-center">
+                                <i class="bi bi-tags fs-3 text-warning d-block"></i>
+                                <small>Labels</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Charts -->
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <h6 class="mb-3">Issues by Status</h6>
+                            <div class="chart-wrapper">
+                                <canvas id="statusChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <h6 class="mb-3">Issues by Priority</h6>
+                            <div class="chart-wrapper">
+                                <canvas id="priorityChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- My Issues -->
+            <div class="card shadow-sm border-0 mt-4">
+                <div class="card-header bg-white border-0 d-flex justify-content-between">
+                    <h5><i class="bi bi-person-circle text-primary"></i> My Recent Issues</h5>
+
+                    <a href="{% url 'issue_list' %}?reporter=me" class="btn btn-sm btn-outline-primary">
+                        View All <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="card-body p-0">
+                    {% if my_issues %}
+                    <table class="table table-hover mb-0">
+                        <tbody>
+                            {% for issue in my_issues %}
+                            <tr>
+                                <td class="ps-3">
+                                    <a href="{% url 'issue_detail' issue.pk %}" class="text-decoration-none fw-semibold">
+                                        #{{ issue.id }} - {{ issue.title|truncatewords:8 }}
+                                    </a>
+                                    <br>
+                                    <small class="text-muted"><i class="bi bi-clock"></i> {{ issue.created_at|timesince }} ago</small>
+                                </td>
+
+                                <td class="text-center">
+                                    <span class="badge bg-{{ issue.status }}">{{ issue.get_status_display }}</span>
+                                </td>
+
+                                <td class="text-center">
+                                    <span class="badge bg-{{ issue.priority }}">{{ issue.get_priority_display }}</span>
+                                </td>
+
+                                <td class="pe-3">
+                                    {% if issue.assignee %}
+                                        <small><i class="bi bi-arrow-right"></i> {{ issue.assignee.username }}</small>
+                                    {% else %}
+                                        <small class="text-muted">Unassigned</small>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                    <div class="text-center py-5">
+                        <i class="bi bi-inbox fs-1 text-muted"></i>
+                        <p class="text-muted">No issues reported yet.</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-xl-4">
+
+            <!-- Notifications -->
+            {% if unread_notifications > 0 %}
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body">
+                    <h6><i class="bi bi-bell-fill text-warning"></i> Notifications</h6>
+                    <p class="mb-1">{{ unread_notifications }} unread notifications</p>
+                    <a href="{% url 'notifications' %}" class="btn btn-sm btn-outline-warning w-100">View</a>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Recent Activity -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-white border-0">
+                    <h6><i class="bi bi-activity text-info"></i> Recent Activity</h6>
+                </div>
+                <div class="card-body">
+                    {% for activity in recent_activity %}
+                    <div class="activity-item">
+                        <div class="activity-dot"></div>
+                        <strong>{{ activity.user.username }}</strong> {{ activity.action }}
+                        <a href="{% url 'issue_detail' activity.issue.pk %}">#{{ activity.issue.id }}</a>
+                        <br>
+                        <small class="text-muted">{{ activity.timestamp|timesince }} ago</small>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+            <!-- Stats -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-white border-0">
+                    <h6><i class="bi bi-bar-chart text-success"></i> Statistics</h6>
+                </div>
+
+                <div class="card-body">
+                    <!-- Open -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <small>Open Issues</small>
+                            <small>{{ stats.open }} / {{ stats.total }}</small>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width:{% widthratio stats.open stats.total 100 %}%"></div>
+                        </div>
+                    </div>
+
+                    <!-- In Progress -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <small>In Progress</small>
+                            <small>{{ stats.in_progress }} / {{ stats.total }}</small>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" style="width:{% widthratio stats.in_progress stats.total 100 %}%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Resolved -->
+                    <div>
+                        <div class="d-flex justify-content-between">
+                            <small>Resolved</small>
+                            <small>{{ stats.resolved }} / {{ stats.total }}</small>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-purple" style="width:{% widthratio stats.resolved stats.total 100 %}%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+/* ------------------ STATUS CHART ------------------ */
+new Chart(document.getElementById("statusChart"), {
+    type: 'doughnut',
+    data: {
+        labels: {{ status_distribution|safe }}.map(s => s.status),
+        datasets: [{
+            data: {{ status_distribution|safe }}.map(s => s.count),
+            backgroundColor: ['#28a745','#ffc107','#17a2b8','#6f42c1','#6c757d','#fd7e14']
+        }]
+    },
+    options: { responsive: true, maintainAspectRatio: false }
+});
+
+
+/* ------------------ PRIORITY CHART ------------------ */
+new Chart(document.getElementById("priorityChart"), {
+    type: 'bar',
+    data: {
+        labels: {{ priority_distribution|safe }}.map(s => s.priority),
+        datasets: [{
+            data: {{ priority_distribution|safe }}.map(s => s.count),
+            backgroundColor: ['#6c757d','#ffc107','#fd7e14','#dc3545']
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }},
+        scales: { y: { beginAtZero: true, ticks: { stepSize: 1 }}}
+    }
+});
+</script>
+{% endblock %}
