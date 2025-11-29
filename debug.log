@@ -658,3 +658,8 @@ INFO 2025-11-29 15:41:32,961 autoreload Watching for file changes with StatReloa
 INFO 2025-11-29 15:41:32,964 autoreload Watching for file changes with StatReloader
 INFO 2025-11-29 15:43:18,834 autoreload Watching for file changes with StatReloader
 INFO 2025-11-29 15:43:22,566 basehttp "GET / HTTP/1.1" 200 29004
+INFO 2025-11-29 16:03:01,697 basehttp "GET /issues/3/ HTTP/1.1" 200 10795
+INFO 2025-11-29 16:03:04,497 basehttp "GET /issues/3/delete/ HTTP/1.1" 200 11490
+INFO 2025-11-29 16:03:07,330 basehttp "POST /issues/3/delete/ HTTP/1.1" 302 0
+INFO 2025-11-29 16:03:07,552 basehttp "GET /issues/ HTTP/1.1" 200 13114
+INFO 2025-11-29 16:03:12,454 basehttp "GET / HTTP/1.1" 200 27025
